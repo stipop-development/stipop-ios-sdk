@@ -12,6 +12,7 @@ let package = Package(
             targets: ["Stipop"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", from: "2.0.2")
     ],
     targets: [
         .binaryTarget(name: "Stipop", path: "Sources/Stipop.xcframework")
