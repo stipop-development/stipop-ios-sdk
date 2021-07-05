@@ -1,0 +1,11 @@
+framework module Stipop {
+  umbrella header "Stipop.h"
+
+  export *
+  module * { export * }
+}
+
+module Stipop.Swift {
+    header "Stipop-Swift.h"
+    requires objc
+}
