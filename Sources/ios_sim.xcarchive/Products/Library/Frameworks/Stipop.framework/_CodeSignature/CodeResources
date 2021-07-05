@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		psB/et7v39v3qocpymwBUsGZtiM=
+		PFBx0Y3YE7fw3/flh7MFtJVepaE=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		wKlOuyuAXnUHSkfWdeRtW4/UFhw=
+		XnhXAWBZPSfFY7J4vj+dFif5kRk=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jUVZuzkDcYNsk4157eoT0MU2jII=
+		IQxRv+ShYY5WYSehEOJ1Yo/XbOM=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		wKlOuyuAXnUHSkfWdeRtW4/UFhw=
+		XnhXAWBZPSfFY7J4vj+dFif5kRk=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		jUVZuzkDcYNsk4157eoT0MU2jII=
+		IQxRv+ShYY5WYSehEOJ1Yo/XbOM=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		J+bgwScNs03p9fU5vRehbj7pOfU=
+		uvlGu+UqJ5dePUDhE77Mfv8nKVY=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vrVfqm8xk/BsXYqj8+gCb0IOyIk=
+		kqXlfGjKMqKLcDI/odmJu/Th1Zg=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		J+bgwScNs03p9fU5vRehbj7pOfU=
+		uvlGu+UqJ5dePUDhE77Mfv8nKVY=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		vrVfqm8xk/BsXYqj8+gCb0IOyIk=
+		kqXlfGjKMqKLcDI/odmJu/Th1Zg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -125,14 +125,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			woWu5OS/nsGVkIabMwcuWiDpc0uNGFcxt+o9iV30pus=
+			s5zbP2w5aVkRtjfAWHpgAcw+nKS8ZVL+fQMbMbS9kaU=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J1AD1XPPYj2fPwNTFg/pcR9kgsSUd/03eePZR2EvPB0=
+			crrPbOLI7Xn279fyFjDf8FOF7VxwEV5Zh47To0tmOsQ=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
@@ -146,14 +146,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			woWu5OS/nsGVkIabMwcuWiDpc0uNGFcxt+o9iV30pus=
+			s5zbP2w5aVkRtjfAWHpgAcw+nKS8ZVL+fQMbMbS9kaU=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J1AD1XPPYj2fPwNTFg/pcR9kgsSUd/03eePZR2EvPB0=
+			crrPbOLI7Xn279fyFjDf8FOF7VxwEV5Zh47To0tmOsQ=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -167,14 +167,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LWMrYLjozdnmSXHjFv2map/3j4M1Lf5mc/cuCH5p5wo=
+			1wUUaV2V1JebNZXVqb1JDcx5+H2J722zIW493Xin57c=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XGV2JW6Lx6NT/4RST9ArLojR/VFcksi614+GiCu/Gqk=
+			aXlQNXN6PsjLBNspzjYF1cT+1/ozMSScEr8f2Nyyg6E=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftdoc</key>
@@ -188,14 +188,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LWMrYLjozdnmSXHjFv2map/3j4M1Lf5mc/cuCH5p5wo=
+			1wUUaV2V1JebNZXVqb1JDcx5+H2J722zIW493Xin57c=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XGV2JW6Lx6NT/4RST9ArLojR/VFcksi614+GiCu/Gqk=
+			aXlQNXN6PsjLBNspzjYF1cT+1/ozMSScEr8f2Nyyg6E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
