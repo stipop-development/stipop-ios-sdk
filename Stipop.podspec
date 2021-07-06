@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 Welcome to Stipop iOS Sticker SDK. With just a simple integration process you can add optimized UI kit and over 270,000 unique stickers to your chat interface.
                        DESC
   s.homepage         = 'https://developers.stipop.io'
-  s.license          = 'Copyright © Stipop, Inc. 2021 - All Rights Reserved.'
+  s.license          = { :text => 'Copyright © Stipop, Inc. 2021 - All Rights Reserved.' }
   s.author           = { 'Stipop, Inc.' => 'contact@stipop.io' }
   s.social_media_url = 'https://twitter.com/stipopdev'
 
