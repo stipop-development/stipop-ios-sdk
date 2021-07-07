@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Stipop
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Stipop
 import Combine
 import Foundation
 @_exported import Stipop
@@ -8,14 +8,14 @@ import Swift
 import SwiftUI
 import UIKit
 public protocol StipopDelegate {
-  func onStickerSelected(_ sticker: SPSticker)
-  func canDownload(_ package: SPPackage) -> Swift.Bool
+  func onStickerSelected(_ sticker: Stipop.SPSticker)
+  func canDownload(_ package: Stipop.SPPackage) -> Swift.Bool
 }
 public struct SPSticker : Swift.Identifiable, Swift.Hashable {
   public var id: Foundation.UUID
   public var stickerId: Swift.Int
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: SPSticker, b: SPSticker) -> Swift.Bool
+  public static func == (a: Stipop.SPSticker, b: Stipop.SPSticker) -> Swift.Bool
   public typealias ID = Foundation.UUID
   public var hashValue: Swift.Int {
     get
@@ -24,7 +24,7 @@ public struct SPSticker : Swift.Identifiable, Swift.Hashable {
 public struct SPPackage : Swift.Identifiable, Swift.Hashable {
   public var id: Foundation.UUID
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: SPPackage, b: SPPackage) -> Swift.Bool
+  public static func == (a: Stipop.SPPackage, b: Stipop.SPPackage) -> Swift.Bool
   public typealias ID = Foundation.UUID
   public var hashValue: Swift.Int {
     get
@@ -32,11 +32,11 @@ public struct SPPackage : Swift.Identifiable, Swift.Hashable {
 }
 public struct Stipop {
   public static func configure()
-  public static func connect(_ navi: UIKit.UIViewController, stipopButton: UIKit.UIButton, userId: Swift.String, language: Swift.String, country: Swift.String, delegate: StipopDelegate)
-  public static func connect(stipopBtnImage: SwiftUI.Binding<UIKit.UIImage?>, userId: Swift.String, language: Swift.String, country: Swift.String, delegate: StipopDelegate)
-  public static func onStickerSelected(_ sticker: SPSticker)
+  public static func connect(_ navi: UIKit.UIViewController, stipopButton: UIKit.UIButton, userId: Swift.String, language: Swift.String, country: Swift.String, delegate: Stipop.StipopDelegate)
+  public static func connect(stipopBtnImage: SwiftUI.Binding<UIKit.UIImage?>, userId: Swift.String, language: Swift.String, country: Swift.String, delegate: Stipop.StipopDelegate)
+  public static func onStickerSelected(_ sticker: Stipop.SPSticker)
   public static func canDownload(_ package: Foundation.NSDictionary) -> Swift.Bool
-  public static func canDownload(_ package: SPPackage) -> Swift.Bool
+  public static func canDownload(_ package: Stipop.SPPackage) -> Swift.Bool
   public static func showSearch()
   public static func showKeyboard()
   public static func send(_ stickerId: Swift.Int)
@@ -48,7 +48,7 @@ public class IntrospectionView : UIKit.UIView {
   @objc deinit
 }
 public struct PlaceholderStyle : SwiftUI.ViewModifier {
-  public func body(content: PlaceholderStyle.Content) -> some SwiftUI.View
+  public func body(content: Stipop.PlaceholderStyle.Content) -> some SwiftUI.View
   
   public typealias Body = @_opaqueReturnTypeOf("$s6Stipop16PlaceholderStyleV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) 🦸
 }
