@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OSEnMpDwtzptpltOvU20xiF8P2o=
+		09C53O44PmTMCZfFTbutNY6U/iw=
 		</data>
 		<key>Headers/Stipop-Swift.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		COdWb53GMbWDqSG7gxMPhgrYJHU=
+		aRJEEMmGprRPc7eNdRV8glOVXrs=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		3EIvyqzVANJLSlKy2atl5TyINeU=
+		ql6d9KnDXsLu1AYHi9eY2vCQytw=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Ayp7kJPBbhw8iPoI8w0pYQiljIQ=
+		VoHqtL/UMrXYiuJptS2AU7V9im0=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		3EIvyqzVANJLSlKy2atl5TyINeU=
+		ql6d9KnDXsLu1AYHi9eY2vCQytw=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Ayp7kJPBbhw8iPoI8w0pYQiljIQ=
+		VoHqtL/UMrXYiuJptS2AU7V9im0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -52,7 +52,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fIQQv+OFbiWtuEEDir0SMwiEDa0=
+			u0ezmV840eJG0AyIzBxXgyS1fKc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -61,7 +61,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Hy7D3E9zj3z+smXPYfuNhspNPps=
+			u0ezmV840eJG0AyIzBxXgyS1fKc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -73,7 +73,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			N/OEssxVfyAMEJ4NGUaq4KmVOWURzh3UhhT70uw7Z7Y=
+			bjg2d9l0DBxSPreZ4CBDZJWOnr8g3qas4MbPJmkyfnU=
 			</data>
 		</dict>
 		<key>Headers/Stipop-Swift.h</key>
@@ -101,14 +101,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qb/lyUdwIGcNI4J5RjJEhXPwE2Tigpd1ad83/R6NNXk=
+			VsPw2cjnM3sVA1BMuGRq3MhiYlxdIUg1wdC2BJu519w=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			84UnRUV8Kzt/YK88fVeFuSnIdzV8XmKBhPnPhdbWCJo=
+			zNAN+xMqnKI3vQ1uHPbjTTfjcGp5ljFtHvESBTf9W14=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
@@ -122,14 +122,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qb/lyUdwIGcNI4J5RjJEhXPwE2Tigpd1ad83/R6NNXk=
+			VsPw2cjnM3sVA1BMuGRq3MhiYlxdIUg1wdC2BJu519w=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			84UnRUV8Kzt/YK88fVeFuSnIdzV8XmKBhPnPhdbWCJo=
+			zNAN+xMqnKI3vQ1uHPbjTTfjcGp5ljFtHvESBTf9W14=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -143,7 +143,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3qhpJizNl1ngY4LyMMeNeoebK0RuL70lSK+kS+AFelw=
+			fECllNElvD14YlSzDt/jYxhFDQuCUDN5v0DPB6+pOWY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -152,7 +152,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HVJVIQMt4tDphzBUPEWljAsQicWCmrcCQ52KFQiiRj8=
+			fECllNElvD14YlSzDt/jYxhFDQuCUDN5v0DPB6+pOWY=
 			</data>
 			<key>optional</key>
 			<true/>

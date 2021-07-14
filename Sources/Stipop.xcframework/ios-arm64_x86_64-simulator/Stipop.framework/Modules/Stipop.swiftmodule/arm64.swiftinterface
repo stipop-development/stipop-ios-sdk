@@ -7,19 +7,15 @@ import Foundation
 import Swift
 import SwiftUI
 import UIKit
-public protocol StipopDelegate {
-  func onStickerSelected(_ sticker: SPSticker)
-  func canDownload(_ package: SPPackage) -> Swift.Bool
+@objc @_hasMissingDesignatedInitializers @available(iOS 13.0, *)
+public class IntrospectionView : UIKit.UIView {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
 }
-public struct SPSticker : Swift.Identifiable, Swift.Hashable {
-  public var id: Foundation.UUID
-  public var stickerId: Swift.Int
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: SPSticker, b: SPSticker) -> Swift.Bool
-  public typealias ID = Foundation.UUID
-  public var hashValue: Swift.Int {
-    get
-  }
+public struct PlaceholderStyle : SwiftUI.ViewModifier {
+  public func body(content: PlaceholderStyle.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s6Stipop16PlaceholderStyleV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) 🦸
 }
 public struct SPPackage : Swift.Identifiable, Swift.Hashable {
   public var id: Foundation.UUID
@@ -29,6 +25,21 @@ public struct SPPackage : Swift.Identifiable, Swift.Hashable {
   public var hashValue: Swift.Int {
     get
   }
+}
+public struct SPSticker : Swift.Identifiable, Swift.Hashable {
+  public var id: Foundation.UUID
+  public var stickerId: Swift.Int
+  public var stickerImg: Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SPSticker, b: SPSticker) -> Swift.Bool
+  public typealias ID = Foundation.UUID
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol StipopDelegate {
+  func onStickerSelected(_ sticker: SPSticker)
+  func canDownload(_ package: SPPackage) -> Swift.Bool
 }
 public struct Stipop {
   public static func configure()
@@ -41,14 +52,4 @@ public struct Stipop {
   public static func showKeyboard()
   public static func send(_ stickerId: Swift.Int)
   public static func send(_ stickerId: Swift.Int, completionHandler: ((Swift.Bool) -> Swift.Void)?)
-}
-@objc @_hasMissingDesignatedInitializers @available(iOS 13.0, *)
-public class IntrospectionView : UIKit.UIView {
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc deinit
-}
-public struct PlaceholderStyle : SwiftUI.ViewModifier {
-  public func body(content: PlaceholderStyle.Content) -> some SwiftUI.View
-  
-  public typealias Body = @_opaqueReturnTypeOf("$s6Stipop16PlaceholderStyleV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) 🦸
 }
