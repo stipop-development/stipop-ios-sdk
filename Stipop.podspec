@@ -13,6 +13,6 @@ Welcome to Stipop iOS Sticker SDK. With just a simple integration process you ca
   s.source           = { :git => 'https://github.com/stipop-development/stipop-ios-sdk.git', :tag => s.version.to_s }
   s.vendored_frameworks = 'Sources/Stipop.xcframework'
 
-  s.ios.deployment_target = '14.5'
+  s.ios.deployment_target = '14.0'
 
 end
