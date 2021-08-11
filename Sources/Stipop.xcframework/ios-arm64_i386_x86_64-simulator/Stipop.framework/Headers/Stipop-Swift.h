@@ -214,8 +214,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 /// A Button that helps you to implement Stipop UI SDK easily.
 SWIFT_CLASS("_TtC6Stipop10SPUIButton")
 @interface SPUIButton : UIButton
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSNumber;
@@ -517,8 +517,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 /// A Button that helps you to implement Stipop UI SDK easily.
 SWIFT_CLASS("_TtC6Stipop10SPUIButton")
 @interface SPUIButton : UIButton
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSNumber;
@@ -820,8 +820,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 /// A Button that helps you to implement Stipop UI SDK easily.
 SWIFT_CLASS("_TtC6Stipop10SPUIButton")
 @interface SPUIButton : UIButton
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSNumber;

@@ -127,11 +127,13 @@ public struct SPTheme {
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SPUIButton : UIKit.UIButton {
+@objc @_inheritsConvenienceInitializers public class SPUIButton : UIKit.UIButton {
   weak public var delegate: Stipop.SPUIButtonDelegate? {
     get
     set
   }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 extension SPUIButton : UIKit.UIKeyInput {

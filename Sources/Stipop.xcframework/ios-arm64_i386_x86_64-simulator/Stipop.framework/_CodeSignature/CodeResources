@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Stipop-Swift.h</key>
 		<data>
-		2WOOU8Pti55QbekiHZtMt4YAB+I=
+		A+fEdMjKgcFehDPTPbFz0izYrxI=
 		</data>
 		<key>Headers/Stipop.h</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		lx4x3WwQALoDvxmT1MhH2uhBfn8=
+		tIFnJt+kHrvTXtbm/wT4xZ2auao=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6i0NXkYfd/Xd94hl5Yb2KzdgUrA=
+		ZjgHafLrpDYP6hxI63kcG3STmNU=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		lx4x3WwQALoDvxmT1MhH2uhBfn8=
+		tIFnJt+kHrvTXtbm/wT4xZ2auao=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		6i0NXkYfd/Xd94hl5Yb2KzdgUrA=
+		ZjgHafLrpDYP6hxI63kcG3STmNU=
 		</data>
 		<key>Modules/Stipop.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LjZUPdAyCEA0CKG4h3LyTf2j3oI=
+		vIpirouWKY58euTAHKfKna2/za0=
 		</data>
 		<key>Modules/Stipop.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qEcaR+lLUYnzdG4HH4/0OgEoMr8=
+		WFJKJq7usAipoeXQXWUa6dYM9K8=
 		</data>
 		<key>Modules/Stipop.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/i386.swiftinterface</key>
 		<data>
-		LjZUPdAyCEA0CKG4h3LyTf2j3oI=
+		vIpirouWKY58euTAHKfKna2/za0=
 		</data>
 		<key>Modules/Stipop.swiftmodule/i386.swiftmodule</key>
 		<data>
-		qEcaR+lLUYnzdG4HH4/0OgEoMr8=
+		WFJKJq7usAipoeXQXWUa6dYM9K8=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		pNBXQQZVMic1jEXMrxYvmpz5Ay8=
+		CxhZK3K1MU48lgjyQpdpR1QoBuo=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		OEc51Rzb4yCmiF11WKMCHC99nDM=
+		ankkykNtxuicmsqeZnRyWmWlSRQ=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		pNBXQQZVMic1jEXMrxYvmpz5Ay8=
+		CxhZK3K1MU48lgjyQpdpR1QoBuo=
 		</data>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		OEc51Rzb4yCmiF11WKMCHC99nDM=
+		ankkykNtxuicmsqeZnRyWmWlSRQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>SPUIPickerView.nib/objects-11.0+.nib</key>
 		<data>
-		HrBMVuEBBgXLQIonwmGmaM5e1js=
+		ht8w6M9xRpzo6meak7leLLAySMI=
 		</data>
 		<key>SPUIPickerView.nib/runtime.nib</key>
 		<data>
-		wVUGBS21yljuzu9+wPA7waSbexU=
+		WRXv/ZVHw3l1hI2dgQFBCwCgCF0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -122,11 +122,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2WOOU8Pti55QbekiHZtMt4YAB+I=
+			A+fEdMjKgcFehDPTPbFz0izYrxI=
 			</data>
 			<key>hash2</key>
 			<data>
-			mUmyPBOWRLkimW6xhOgniuWuiJFs8gCKJSe13BAR1Kk=
+			lsTL8ZSx2ZNaqvQbbfR9qt1gY19sWCOsXIZIqgncsvs=
 			</data>
 		</dict>
 		<key>Headers/Stipop.h</key>
@@ -155,22 +155,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lx4x3WwQALoDvxmT1MhH2uhBfn8=
+			tIFnJt+kHrvTXtbm/wT4xZ2auao=
 			</data>
 			<key>hash2</key>
 			<data>
-			wb0bLoV5ao9A18o8pQI17hdeg0qeeu5RzQ79Nu+Ddv4=
+			jzwaV2PvaJ+3/VeKtYDDyG4HPJLbdLNNhYczg9r+a+c=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6i0NXkYfd/Xd94hl5Yb2KzdgUrA=
+			ZjgHafLrpDYP6hxI63kcG3STmNU=
 			</data>
 			<key>hash2</key>
 			<data>
-			duT6l3Fek+E7u293c5xC+enctuRZB7xYcDyAHP+NWqY=
+			xLIhKZ4vCQU/F6xjCnQjtb+ac4nlcZjSnIxgJelmKys=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
@@ -188,22 +188,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lx4x3WwQALoDvxmT1MhH2uhBfn8=
+			tIFnJt+kHrvTXtbm/wT4xZ2auao=
 			</data>
 			<key>hash2</key>
 			<data>
-			wb0bLoV5ao9A18o8pQI17hdeg0qeeu5RzQ79Nu+Ddv4=
+			jzwaV2PvaJ+3/VeKtYDDyG4HPJLbdLNNhYczg9r+a+c=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6i0NXkYfd/Xd94hl5Yb2KzdgUrA=
+			ZjgHafLrpDYP6hxI63kcG3STmNU=
 			</data>
 			<key>hash2</key>
 			<data>
-			duT6l3Fek+E7u293c5xC+enctuRZB7xYcDyAHP+NWqY=
+			xLIhKZ4vCQU/F6xjCnQjtb+ac4nlcZjSnIxgJelmKys=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -221,22 +221,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LjZUPdAyCEA0CKG4h3LyTf2j3oI=
+			vIpirouWKY58euTAHKfKna2/za0=
 			</data>
 			<key>hash2</key>
 			<data>
-			+PNjeFzbtx3EmRupEhRTocj5/3y3C8NFOOqkKejm1kM=
+			GCFZchHPdx8HamW0lt9KXy64pHu1Ivk0R59uOW/UhDU=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qEcaR+lLUYnzdG4HH4/0OgEoMr8=
+			WFJKJq7usAipoeXQXWUa6dYM9K8=
 			</data>
 			<key>hash2</key>
 			<data>
-			X2G7f6OWsDDxbohhF74F2+KFIHHED6nNKepVRmqGOaY=
+			uHecjh02Lm69Hdju9XUJpbPaJ6p1JusT/kHU1dF2yEQ=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/i386.swiftdoc</key>
@@ -254,22 +254,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LjZUPdAyCEA0CKG4h3LyTf2j3oI=
+			vIpirouWKY58euTAHKfKna2/za0=
 			</data>
 			<key>hash2</key>
 			<data>
-			+PNjeFzbtx3EmRupEhRTocj5/3y3C8NFOOqkKejm1kM=
+			GCFZchHPdx8HamW0lt9KXy64pHu1Ivk0R59uOW/UhDU=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qEcaR+lLUYnzdG4HH4/0OgEoMr8=
+			WFJKJq7usAipoeXQXWUa6dYM9K8=
 			</data>
 			<key>hash2</key>
 			<data>
-			X2G7f6OWsDDxbohhF74F2+KFIHHED6nNKepVRmqGOaY=
+			uHecjh02Lm69Hdju9XUJpbPaJ6p1JusT/kHU1dF2yEQ=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -287,22 +287,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pNBXQQZVMic1jEXMrxYvmpz5Ay8=
+			CxhZK3K1MU48lgjyQpdpR1QoBuo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZqPwPwW2UlnwwI/DmI5K4frhyO6JnIiuKncZBOhbYKg=
+			rH1T0OwDgolBagFvzx3tCncEBMS3xRIGvS3R99PwzhA=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OEc51Rzb4yCmiF11WKMCHC99nDM=
+			ankkykNtxuicmsqeZnRyWmWlSRQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			xGatd5LKwBLxJrVRmRpPipSxQ5arhVQHdmHAqoyroE4=
+			ywTpx1TYB09PuHO1eUI1zCazwAE43wn/ngjsnrB1NFM=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftdoc</key>
@@ -320,22 +320,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pNBXQQZVMic1jEXMrxYvmpz5Ay8=
+			CxhZK3K1MU48lgjyQpdpR1QoBuo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZqPwPwW2UlnwwI/DmI5K4frhyO6JnIiuKncZBOhbYKg=
+			rH1T0OwDgolBagFvzx3tCncEBMS3xRIGvS3R99PwzhA=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OEc51Rzb4yCmiF11WKMCHC99nDM=
+			ankkykNtxuicmsqeZnRyWmWlSRQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			xGatd5LKwBLxJrVRmRpPipSxQ5arhVQHdmHAqoyroE4=
+			ywTpx1TYB09PuHO1eUI1zCazwAE43wn/ngjsnrB1NFM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -353,22 +353,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HrBMVuEBBgXLQIonwmGmaM5e1js=
+			ht8w6M9xRpzo6meak7leLLAySMI=
 			</data>
 			<key>hash2</key>
 			<data>
-			WfYwYYY4Nm3wDzk6sLKMq/ZI/hV2kvq1h23xoWO1EQ4=
+			oBbrF9TqvS+eQjczsAb/MwVn0tCeITQkwu3NQQqfoR8=
 			</data>
 		</dict>
 		<key>SPUIPickerView.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wVUGBS21yljuzu9+wPA7waSbexU=
+			WRXv/ZVHw3l1hI2dgQFBCwCgCF0=
 			</data>
 			<key>hash2</key>
 			<data>
-			iNRrqu5SQd3a5rdqkpwOCJMFFzmd8bIVsowXoe09bXo=
+			t1AV2dHaAkFwfFo026STgU0FORgI/ofbv5F7TBBhbRk=
 			</data>
 		</dict>
 	</dict>
