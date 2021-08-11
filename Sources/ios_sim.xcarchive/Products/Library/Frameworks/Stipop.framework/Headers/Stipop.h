@@ -2,7 +2,7 @@
 //  Stipop.h
 //  Stipop
 //
-//  Created by Wangbum Lee on 2021/06/02.
+//  Created by Jay Ahn on 2021/07/26.
 //
 
 #import <Foundation/Foundation.h>

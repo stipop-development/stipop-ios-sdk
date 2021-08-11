@@ -1,0 +1,180 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Stipop
+import Foundation
+@_exported import Stipop
+import Swift
+import UIKit
+@objc @_inheritsConvenienceInitializers public class SPUIPickerView : UIKit.UIInputView {
+  weak public var delegate: SPDelegate? {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, inputViewStyle: UIKit.UIInputView.Style)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct SPPackage : Swift.Identifiable, Swift.Hashable, Swift.Codable {
+  public static func == (lhs: SPPackage, rhs: SPPackage) -> Swift.Bool
+  public var id: Swift.Int
+  public var packageName: Swift.String?
+  public var packageImg: Swift.String?
+  public var packageCategory: Swift.String?
+  public var packageKeywords: Swift.String?
+  public var order: Swift.Int?
+  public var artistName: Swift.String?
+  public var language: Swift.String?
+  public var stickers: [SPSticker]?
+  public var isDownload: Swift.Bool? {
+    get
+  }
+  public init(id: Swift.Int)
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+public protocol NibLoadableProtocol {
+  var nibName: Swift.String { get }
+  var nib: UIKit.UINib { get }
+}
+extension NibLoadableProtocol {
+  public var nibName: Swift.String {
+    get
+  }
+  public var nib: UIKit.UINib {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class SPUISearchViewController : SPUIViewController {
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol ProviderProtocol {
+}
+public protocol SPDelegate : AnyObject {
+  var user: SPUser { get }
+  func onStickerSelect(_ sticker: SPSticker)
+}
+public protocol SPUIButtonDelegate : SPDelegate {
+  var viewType: SPViewType { get }
+}
+public enum SPViewType {
+  case search
+  case picker
+  public static func == (a: SPViewType, b: SPViewType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SPPlist : Swift.Codable {
+  public static var shared: SPPlist!
+  public static func initialize()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public protocol RepositoryProtocol {
+  static var instance: RepositoryProtocol { get }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SPUIStickerView : UIKit.UIView {
+  public func setSticker(_ sticker: SPSticker)
+  public func setSticker(_ img: Swift.String, completed: (() -> Swift.Void)? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Stipop {
+  public static func initialize()
+  @objc deinit
+}
+public struct SPUser : Swift.Hashable {
+  public var userID: Swift.String
+  public var country: Swift.String
+  public var language: Swift.String
+  public init(userID: Swift.String, country: Swift.String = Locale.current.regionCode ?? "us", language: Swift.String = Locale.current.languageCode ?? "en")
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SPUser, b: SPUser) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SPTheme {
+}
+@objc @_inheritsConvenienceInitializers open class SPUIStoreViewController : SPUIViewController {
+  open var storeMode: SPStoreMode
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class TestViewController : SPUIStoreViewController {
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class SPUIViewController : UIKit.UIViewController {
+  open var stipopDelegate: SPDelegate?
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SPUIButton : UIKit.UIButton {
+  weak public var delegate: SPUIButtonDelegate? {
+    get
+    set
+  }
+  @objc deinit
+}
+extension SPUIButton : UIKit.UIKeyInput {
+  @objc dynamic public var hasText: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public func insertText(_ text: Swift.String)
+  @objc dynamic public func deleteBackward()
+  @objc override dynamic public var canBecomeFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var canResignFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var inputView: UIKit.UIView? {
+    @objc get
+  }
+}
+public enum SPStoreMode : Swift.Int {
+  case allStickers
+  case mySticker
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct SPSticker : Swift.Identifiable, Swift.Hashable, Swift.Codable {
+  public static func == (lhs: SPSticker, rhs: SPSticker) -> Swift.Bool
+  public var id: Swift.Int
+  public var stickerImg: Swift.String
+  public var keyword: Swift.String?
+  public init(id: Swift.Int, stickerImg: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SPViewType : Swift.Equatable {}
+extension SPViewType : Swift.Hashable {}
+extension SPStoreMode : Swift.Equatable {}
+extension SPStoreMode : Swift.Hashable {}
+extension SPStoreMode : Swift.RawRepresentable {}
