@@ -6,7 +6,7 @@ import Foundation
 import Swift
 import UIKit
 @objc @_inheritsConvenienceInitializers public class SPUIPickerView : UIKit.UIInputView {
-  weak public var delegate: SPDelegate? {
+  public var delegate: SPDelegate? {
     get
     set
   }
@@ -37,6 +37,23 @@ public struct SPPackage : Swift.Identifiable, Swift.Hashable, Swift.Codable {
   }
   public init(from decoder: Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers public class SPLogger {
+  public static func log(logLevel: SPLogLevelType, message: Any, sender: Any)
+  @objc deinit
+}
+public enum SPLogLevelType : Swift.Int {
+  case trace
+  case debug
+  case info
+  case warning
+  case error
+  case fatal
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public protocol NibLoadableProtocol {
   var nibName: Swift.String { get }
   var nib: UIKit.UINib { get }
@@ -51,14 +68,16 @@ extension NibLoadableProtocol {
 }
 @objc @_inheritsConvenienceInitializers open class SPUISearchViewController : SPUIViewController {
   @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
   @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 public protocol ProviderProtocol {
 }
-public protocol SPDelegate : AnyObject {
+public protocol SPDelegate {
   var user: SPUser { get }
   func onStickerSelect(_ sticker: SPSticker)
 }
@@ -83,9 +102,11 @@ public struct SPPlist : Swift.Codable {
 public protocol RepositoryProtocol {
   static var instance: RepositoryProtocol { get }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SPUIStickerView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers public class SPUIStickerView : UIKit.UIView {
   public func setSticker(_ sticker: SPSticker)
   public func setSticker(_ img: Swift.String, completed: (() -> Swift.Void)? = nil)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Stipop {
@@ -108,8 +129,10 @@ public struct SPTheme {
 @objc @_inheritsConvenienceInitializers open class SPUIStoreViewController : SPUIViewController {
   open var storeMode: SPStoreMode
   @objc override dynamic open func viewDidLoad()
-  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
   @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -119,16 +142,25 @@ public struct SPTheme {
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers open class SPUIView : UIKit.UIView {
+  @objc override dynamic open func setNeedsDisplay()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers open class SPUIViewController : UIKit.UIViewController {
   open var stipopDelegate: SPDelegate?
+  @objc override dynamic open func viewDidLoad()
   @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
   @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class SPUIButton : UIKit.UIButton {
-  weak public var delegate: SPUIButtonDelegate? {
+  public var delegate: SPUIButtonDelegate? {
     get
     set
   }
@@ -175,6 +207,9 @@ public struct SPSticker : Swift.Identifiable, Swift.Hashable, Swift.Codable {
     get
   }
 }
+extension SPLogLevelType : Swift.Equatable {}
+extension SPLogLevelType : Swift.Hashable {}
+extension SPLogLevelType : Swift.RawRepresentable {}
 extension SPViewType : Swift.Equatable {}
 extension SPViewType : Swift.Hashable {}
 extension SPStoreMode : Swift.Equatable {}

@@ -244,8 +244,11 @@ SWIFT_CLASS("_TtC6Stipop14SPUIPickerView")
 
 SWIFT_CLASS("_TtC6Stipop18SPUIViewController")
 @interface SPUIViewController : UIViewController
+- (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -254,26 +257,31 @@ SWIFT_CLASS("_TtC6Stipop18SPUIViewController")
 SWIFT_CLASS("_TtC6Stipop24SPUISearchViewController")
 @interface SPUISearchViewController : SPUIViewController
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
 
 SWIFT_CLASS("_TtC6Stipop15SPUIStickerView")
 @interface SPUIStickerView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC6Stipop23SPUIStoreViewController")
 @interface SPUIStoreViewController : SPUIViewController
 - (void)viewDidLoad;
-- (void)viewDidDisappear:(BOOL)animated;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidDisappear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -282,6 +290,13 @@ SWIFT_CLASS("_TtC6Stipop23SPUIStoreViewController")
 
 
 
+
+SWIFT_CLASS("_TtC6Stipop8SPUIView")
+@interface SPUIView : UIView
+- (void)setNeedsDisplay;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
@@ -547,8 +562,11 @@ SWIFT_CLASS("_TtC6Stipop14SPUIPickerView")
 
 SWIFT_CLASS("_TtC6Stipop18SPUIViewController")
 @interface SPUIViewController : UIViewController
+- (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -557,26 +575,31 @@ SWIFT_CLASS("_TtC6Stipop18SPUIViewController")
 SWIFT_CLASS("_TtC6Stipop24SPUISearchViewController")
 @interface SPUISearchViewController : SPUIViewController
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
 
 SWIFT_CLASS("_TtC6Stipop15SPUIStickerView")
 @interface SPUIStickerView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC6Stipop23SPUIStoreViewController")
 @interface SPUIStoreViewController : SPUIViewController
 - (void)viewDidLoad;
-- (void)viewDidDisappear:(BOOL)animated;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidDisappear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -585,6 +608,13 @@ SWIFT_CLASS("_TtC6Stipop23SPUIStoreViewController")
 
 
 
+
+SWIFT_CLASS("_TtC6Stipop8SPUIView")
+@interface SPUIView : UIView
+- (void)setNeedsDisplay;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
