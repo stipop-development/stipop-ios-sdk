@@ -104,7 +104,8 @@ public protocol RepositoryProtocol {
 }
 @objc @_inheritsConvenienceInitializers public class SPUIStickerView : UIKit.UIView {
   public func setSticker(_ sticker: SPSticker)
-  public func setSticker(_ img: Swift.String, completed: (() -> Swift.Void)? = nil)
+  public func setSticker(_ sticker: Swift.String)
+  public func clearSticker()
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
