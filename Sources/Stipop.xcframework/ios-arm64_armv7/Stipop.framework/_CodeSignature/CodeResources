@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm.swiftmodule</key>
 		<data>
-		03q8q0JgXfzm+t13V/U7RDFeaMQ=
+		OhVuXipTyPRKbhdLzQjazI4W6PI=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ORlmK2JgdvgdDeTPsJEGDxFVqrQ=
+		KtzzO0vfOhPPcNIPFWHfpVH8nrA=
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ORlmK2JgdvgdDeTPsJEGDxFVqrQ=
+		KtzzO0vfOhPPcNIPFWHfpVH8nrA=
 		</data>
 		<key>Modules/Stipop.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		03q8q0JgXfzm+t13V/U7RDFeaMQ=
+		OhVuXipTyPRKbhdLzQjazI4W6PI=
 		</data>
 		<key>Modules/Stipop.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/Stipop.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		03q8q0JgXfzm+t13V/U7RDFeaMQ=
+		OhVuXipTyPRKbhdLzQjazI4W6PI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>SPUIPickerView.nib/objects-11.0+.nib</key>
 		<data>
-		i4zpOEZc8XYpBXs0zE/5u4Yt6lw=
+		3ZOP5bRI6v5HNqmH+IKUan10Icg=
 		</data>
 		<key>SPUIPickerView.nib/runtime.nib</key>
 		<data>
-		n0WJ/wHd6TSQcsjv1LLjF+68UE8=
+		aCNoCxrrqRcLq9gQKy5q/ymqRdw=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -172,11 +172,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			03q8q0JgXfzm+t13V/U7RDFeaMQ=
+			OhVuXipTyPRKbhdLzQjazI4W6PI=
 			</data>
 			<key>hash2</key>
 			<data>
-			uEEsUHcdwhwHDrfnB7+TmdIh6Cya7BW8jXpUXAG2ajI=
+			ZSYqbboKPUXOJDHDb+rh1g7HGIE3et3AgpWy61lCYjY=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -205,11 +205,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ORlmK2JgdvgdDeTPsJEGDxFVqrQ=
+			KtzzO0vfOhPPcNIPFWHfpVH8nrA=
 			</data>
 			<key>hash2</key>
 			<data>
-			NcxaDYghNeR1oGeWLPrdP9Y2zqt979Wk/WgcLkMi39U=
+			EuYevKCiD6TganI8/5zG6k/xA53Eur/hgqwK0w8pcOI=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/arm64.swiftdoc</key>
@@ -238,11 +238,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ORlmK2JgdvgdDeTPsJEGDxFVqrQ=
+			KtzzO0vfOhPPcNIPFWHfpVH8nrA=
 			</data>
 			<key>hash2</key>
 			<data>
-			NcxaDYghNeR1oGeWLPrdP9Y2zqt979Wk/WgcLkMi39U=
+			EuYevKCiD6TganI8/5zG6k/xA53Eur/hgqwK0w8pcOI=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -271,11 +271,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			03q8q0JgXfzm+t13V/U7RDFeaMQ=
+			OhVuXipTyPRKbhdLzQjazI4W6PI=
 			</data>
 			<key>hash2</key>
 			<data>
-			uEEsUHcdwhwHDrfnB7+TmdIh6Cya7BW8jXpUXAG2ajI=
+			ZSYqbboKPUXOJDHDb+rh1g7HGIE3et3AgpWy61lCYjY=
 			</data>
 		</dict>
 		<key>Modules/Stipop.swiftmodule/armv7.swiftdoc</key>
@@ -304,11 +304,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			03q8q0JgXfzm+t13V/U7RDFeaMQ=
+			OhVuXipTyPRKbhdLzQjazI4W6PI=
 			</data>
 			<key>hash2</key>
 			<data>
-			uEEsUHcdwhwHDrfnB7+TmdIh6Cya7BW8jXpUXAG2ajI=
+			ZSYqbboKPUXOJDHDb+rh1g7HGIE3et3AgpWy61lCYjY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -326,22 +326,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i4zpOEZc8XYpBXs0zE/5u4Yt6lw=
+			3ZOP5bRI6v5HNqmH+IKUan10Icg=
 			</data>
 			<key>hash2</key>
 			<data>
-			zjzBFkNCfoSho6V3lSgap1tRbYQqPvca07x8NG5NDbw=
+			RfC0gKfUi/0XQYShNUFz66jQ3sj3/zokCar1NDDz53Q=
 			</data>
 		</dict>
 		<key>SPUIPickerView.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			n0WJ/wHd6TSQcsjv1LLjF+68UE8=
+			aCNoCxrrqRcLq9gQKy5q/ymqRdw=
 			</data>
 			<key>hash2</key>
 			<data>
-			oQddZHp34WSoFGw9CwT/rgx4d5XAkySql3YljRk4+Ho=
+			+WRGSAJaHKZ3WMr0GCoL48Z9sxoXOP6PwPQJKaHDv5M=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
