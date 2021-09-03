@@ -24,7 +24,7 @@ Go to File > Swift Packages > Add Package Dependency... and enter `https://githu
 If you have a Swift Package, simply add dependency into Package.swift
 ```swift
 dependencies: [
-  .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.1.0-beta.8"))
+  .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.2.0-beta.0"))
 ]
 ```
 

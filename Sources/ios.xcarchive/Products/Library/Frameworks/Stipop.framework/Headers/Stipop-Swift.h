@@ -270,6 +270,7 @@ SWIFT_CLASS("_TtC6Stipop24SPUISearchViewController")
 
 SWIFT_CLASS("_TtC6Stipop15SPUIStickerView")
 @interface SPUIStickerView : UIView
+- (void)layoutSubviews;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -305,6 +306,9 @@ SWIFT_CLASS("_TtC6Stipop18TestViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
 
 
 
@@ -588,6 +592,7 @@ SWIFT_CLASS("_TtC6Stipop24SPUISearchViewController")
 
 SWIFT_CLASS("_TtC6Stipop15SPUIStickerView")
 @interface SPUIStickerView : UIView
+- (void)layoutSubviews;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -623,6 +628,9 @@ SWIFT_CLASS("_TtC6Stipop18TestViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
 
 
 

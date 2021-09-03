@@ -6,7 +6,7 @@ import Foundation
 import Swift
 import UIKit
 @objc @_inheritsConvenienceInitializers public class SPUIPickerView : UIKit.UIInputView {
-  public var delegate: Stipop.SPDelegate? {
+  weak public var delegate: Stipop.SPDelegate? {
     get
     set
   }
@@ -27,6 +27,7 @@ public struct SPPackage : Swift.Identifiable, Swift.Hashable, Swift.Codable {
   public var stickers: [Stipop.SPSticker]?
   public var isDownload: Swift.Bool? {
     get
+    set
   }
   public init(id: Swift.Int)
   public func hash(into hasher: inout Swift.Hasher)
@@ -54,18 +55,6 @@ public enum SPLogLevelType : Swift.Int {
     get
   }
 }
-public protocol NibLoadableProtocol {
-  var nibName: Swift.String { get }
-  var nib: UIKit.UINib { get }
-}
-extension NibLoadableProtocol {
-  public var nibName: Swift.String {
-    get
-  }
-  public var nib: UIKit.UINib {
-    get
-  }
-}
 @objc @_inheritsConvenienceInitializers open class SPUISearchViewController : Stipop.SPUIViewController {
   @objc override dynamic open func viewDidLoad()
   @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
@@ -75,9 +64,7 @@ extension NibLoadableProtocol {
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-public protocol ProviderProtocol {
-}
-public protocol SPDelegate {
+public protocol SPDelegate : AnyObject {
   var user: Stipop.SPUser { get }
   func onStickerSelect(_ sticker: Stipop.SPSticker)
 }
@@ -87,17 +74,12 @@ public protocol SPUIButtonDelegate : Stipop.SPDelegate {
 public enum SPViewType {
   case search
   case picker
+  case search_new
   public static func == (a: Stipop.SPViewType, b: Stipop.SPViewType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-}
-public struct SPPlist : Swift.Codable {
-  public static var shared: Stipop.SPPlist!
-  public static func initialize()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
 }
 public protocol RepositoryProtocol {
   static var instance: Stipop.RepositoryProtocol { get }
@@ -106,13 +88,28 @@ public protocol RepositoryProtocol {
   public func setSticker(_ sticker: Stipop.SPSticker)
   public func setSticker(_ sticker: Swift.String)
   public func clearSticker()
+  @objc override dynamic public func layoutSubviews()
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Stipop {
   public static func initialize()
+  public static var themeType: Stipop.SPThemeType {
+    get
+    set
+  }
   @objc deinit
+}
+public enum SPThemeType {
+  case none
+  case light
+  case dark
+  public static func == (a: Stipop.SPThemeType, b: Stipop.SPThemeType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public struct SPUser : Swift.Hashable {
   public var userID: Swift.String
@@ -125,10 +122,7 @@ public struct SPUser : Swift.Hashable {
     get
   }
 }
-public struct SPTheme {
-}
 @objc @_inheritsConvenienceInitializers open class SPUIStoreViewController : Stipop.SPUIViewController {
-  open var storeMode: Stipop.SPStoreMode
   @objc override dynamic open func viewDidLoad()
   @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
   @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
@@ -142,6 +136,14 @@ public struct SPTheme {
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
+}
+public struct SPPlist : Swift.Codable {
+  public struct ColorTheme : Swift.Codable {
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers open class SPUIView : UIKit.UIView {
   @objc override dynamic open func setNeedsDisplay()
@@ -161,10 +163,7 @@ public struct SPTheme {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class SPUIButton : UIKit.UIButton {
-  public var delegate: Stipop.SPUIButtonDelegate? {
-    get
-    set
-  }
+  weak public var delegate: Stipop.SPUIButtonDelegate?
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -183,15 +182,6 @@ extension SPUIButton : UIKit.UIKeyInput {
   }
   @objc override dynamic public var inputView: UIKit.UIView? {
     @objc get
-  }
-}
-public enum SPStoreMode : Swift.Int {
-  case allStickers
-  case mySticker
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
   }
 }
 public struct SPSticker : Swift.Identifiable, Swift.Hashable, Swift.Codable {
@@ -213,6 +203,5 @@ extension Stipop.SPLogLevelType : Swift.Hashable {}
 extension Stipop.SPLogLevelType : Swift.RawRepresentable {}
 extension Stipop.SPViewType : Swift.Equatable {}
 extension Stipop.SPViewType : Swift.Hashable {}
-extension Stipop.SPStoreMode : Swift.Equatable {}
-extension Stipop.SPStoreMode : Swift.Hashable {}
-extension Stipop.SPStoreMode : Swift.RawRepresentable {}
+extension Stipop.SPThemeType : Swift.Equatable {}
+extension Stipop.SPThemeType : Swift.Hashable {}
