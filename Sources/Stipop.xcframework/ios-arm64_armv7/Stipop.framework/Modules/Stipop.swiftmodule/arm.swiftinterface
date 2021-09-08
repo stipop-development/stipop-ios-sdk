@@ -55,15 +55,6 @@ public enum SPLogLevelType : Swift.Int {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers open class SPUISearchViewController : SPUIViewController {
-  @objc override dynamic open func viewDidLoad()
-  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
 public protocol SPDelegate : AnyObject {
   var user: SPUser { get }
   func onStickerSelect(_ sticker: SPSticker)
@@ -74,7 +65,6 @@ public protocol SPUIButtonDelegate : SPDelegate {
 public enum SPViewType {
   case search
   case picker
-  case search_new
   public static func == (a: SPViewType, b: SPViewType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -95,17 +85,17 @@ public protocol RepositoryProtocol {
 }
 @_hasMissingDesignatedInitializers public class Stipop {
   public static func initialize()
-  public static var themeType: SPThemeType {
+  public static var themeType: SPUIThemeType {
     get
     set
   }
   @objc deinit
 }
-public enum SPThemeType {
+public enum SPUIThemeType {
   case none
   case light
   case dark
-  public static func == (a: SPThemeType, b: SPThemeType) -> Swift.Bool
+  public static func == (a: SPUIThemeType, b: SPUIThemeType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -121,46 +111,6 @@ public struct SPUser : Swift.Hashable {
   public var hashValue: Swift.Int {
     get
   }
-}
-@objc @_inheritsConvenienceInitializers open class SPUIStoreViewController : SPUIViewController {
-  @objc override dynamic open func viewDidLoad()
-  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
-  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
-  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers open class TestViewController : SPUIStoreViewController {
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-public struct SPPlist : Swift.Codable {
-  public struct ColorTheme : Swift.Codable {
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
-  }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-@objc @_inheritsConvenienceInitializers open class SPUIView : UIKit.UIView {
-  @objc override dynamic open func setNeedsDisplay()
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers open class SPUIViewController : UIKit.UIViewController {
-  open var stipopDelegate: SPDelegate?
-  @objc override dynamic open func viewDidLoad()
-  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
-  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
-  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class SPUIButton : UIKit.UIButton {
   weak public var delegate: SPUIButtonDelegate?
@@ -203,5 +153,5 @@ extension SPLogLevelType : Swift.Hashable {}
 extension SPLogLevelType : Swift.RawRepresentable {}
 extension SPViewType : Swift.Equatable {}
 extension SPViewType : Swift.Hashable {}
-extension SPThemeType : Swift.Equatable {}
-extension SPThemeType : Swift.Hashable {}
+extension SPUIThemeType : Swift.Equatable {}
+extension SPUIThemeType : Swift.Hashable {}
