@@ -232,12 +232,46 @@ SWIFT_CLASS("_TtC6Stipop10SPUIButton")
 @end
 
 
+SWIFT_CLASS("_TtC6Stipop19SPUIPackageIconView")
+@interface SPUIPackageIconView : UIView
+@property (nonatomic) UIViewContentMode contentMode;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC6Stipop14SPUIPickerView")
 @interface SPUIPickerView : UIInputView
 - (nonnull instancetype)initWithFrame:(CGRect)frame inputViewStyle:(UIInputViewStyle)inputViewStyle OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@class UITraitCollection;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC6Stipop24SPUISearchViewController")
+@interface SPUISearchViewController : UIViewController
+- (void)viewDidLoad;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionView;
+@class UICollectionViewLayout;
+@class NSIndexPath;
+
+@interface SPUISearchViewController (SWIFT_EXTENSION(Stipop)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITextField;
+
+@interface SPUISearchViewController (SWIFT_EXTENSION(Stipop)) <UITextFieldDelegate>
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+@end
 
 
 SWIFT_CLASS("_TtC6Stipop15SPUIStickerView")
@@ -494,12 +528,46 @@ SWIFT_CLASS("_TtC6Stipop10SPUIButton")
 @end
 
 
+SWIFT_CLASS("_TtC6Stipop19SPUIPackageIconView")
+@interface SPUIPackageIconView : UIView
+@property (nonatomic) UIViewContentMode contentMode;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC6Stipop14SPUIPickerView")
 @interface SPUIPickerView : UIInputView
 - (nonnull instancetype)initWithFrame:(CGRect)frame inputViewStyle:(UIInputViewStyle)inputViewStyle OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@class UITraitCollection;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC6Stipop24SPUISearchViewController")
+@interface SPUISearchViewController : UIViewController
+- (void)viewDidLoad;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionView;
+@class UICollectionViewLayout;
+@class NSIndexPath;
+
+@interface SPUISearchViewController (SWIFT_EXTENSION(Stipop)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITextField;
+
+@interface SPUISearchViewController (SWIFT_EXTENSION(Stipop)) <UITextFieldDelegate>
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+@end
 
 
 SWIFT_CLASS("_TtC6Stipop15SPUIStickerView")

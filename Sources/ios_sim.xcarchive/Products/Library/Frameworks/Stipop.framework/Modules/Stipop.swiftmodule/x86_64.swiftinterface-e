@@ -38,23 +38,6 @@ public struct SPPackage : Swift.Identifiable, Swift.Hashable, Swift.Codable {
   }
   public init(from decoder: Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers public class SPLogger {
-  public static func log(logLevel: Stipop.SPLogLevelType, message: Any, sender: Any)
-  @objc deinit
-}
-public enum SPLogLevelType : Swift.Int {
-  case trace
-  case debug
-  case info
-  case warning
-  case error
-  case fatal
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 public protocol SPDelegate : AnyObject {
   var user: Stipop.SPUser { get }
   func onStickerSelect(_ sticker: Stipop.SPSticker)
@@ -70,9 +53,6 @@ public enum SPViewType {
   public var hashValue: Swift.Int {
     get
   }
-}
-public protocol RepositoryProtocol {
-  static var instance: Stipop.RepositoryProtocol { get }
 }
 @objc @_inheritsConvenienceInitializers public class SPUIStickerView : UIKit.UIView {
   public func setSticker(_ sticker: Stipop.SPSticker)
@@ -112,6 +92,19 @@ public struct SPUser : Swift.Hashable {
     get
   }
 }
+@objc @_inheritsConvenienceInitializers public class SPUIPackageIconView : UIKit.UIView {
+  public func setPackage(_ package: Stipop.SPPackage)
+  @available(*, deprecated, renamed: "clearPackage")
+  public func clearSticker()
+  public func clearPackage()
+  @objc override dynamic public var contentMode: UIKit.UIView.ContentMode {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers public class SPUIButton : UIKit.UIButton {
   weak public var delegate: Stipop.SPUIButtonDelegate?
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
@@ -134,6 +127,24 @@ extension SPUIButton : UIKit.UIKeyInput {
     @objc get
   }
 }
+@objc @_inheritsConvenienceInitializers public class SPUISearchViewController : UIKit.UIViewController {
+  weak public var delegate: Stipop.SPDelegate? {
+    get
+    set
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension SPUISearchViewController : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+}
+extension SPUISearchViewController : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+}
 public struct SPSticker : Swift.Identifiable, Swift.Hashable, Swift.Codable {
   public static func == (lhs: Stipop.SPSticker, rhs: Stipop.SPSticker) -> Swift.Bool
   public var id: Swift.Int
@@ -148,9 +159,6 @@ public struct SPSticker : Swift.Identifiable, Swift.Hashable, Swift.Codable {
     get
   }
 }
-extension Stipop.SPLogLevelType : Swift.Equatable {}
-extension Stipop.SPLogLevelType : Swift.Hashable {}
-extension Stipop.SPLogLevelType : Swift.RawRepresentable {}
 extension Stipop.SPViewType : Swift.Equatable {}
 extension Stipop.SPViewType : Swift.Hashable {}
 extension Stipop.SPUIThemeType : Swift.Equatable {}
