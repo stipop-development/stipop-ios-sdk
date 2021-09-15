@@ -24,14 +24,14 @@ Go to File > Swift Packages > Add Package Dependency... and enter `https://githu
 If you have a Swift Package, simply add dependency into Package.swift
 ```swift
 dependencies: [
-  .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.2.0-beta.6"))
+  .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.2.0-beta.7"))
 ]
 ```
 
 ### Cocoapods
 Copy & Paste below into `Podfile`
 ```ruby
-pod 'Stipop' , '~> 0.2.0-beta.6'
+pod 'Stipop' , '~> 0.2.0-beta.7'
 ```
 
 ## Getting Started

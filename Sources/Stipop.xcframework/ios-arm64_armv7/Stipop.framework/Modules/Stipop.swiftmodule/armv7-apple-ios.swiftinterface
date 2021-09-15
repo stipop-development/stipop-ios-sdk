@@ -69,6 +69,7 @@ public enum SPViewType {
     get
     set
   }
+  public static let bundle: Foundation.Bundle
   @objc deinit
 }
 public enum SPUIThemeType {
@@ -85,7 +86,8 @@ public struct SPUser : Swift.Hashable {
   public var userID: Swift.String
   public var country: Swift.String
   public var language: Swift.String
-  public init(userID: Swift.String, country: Swift.String = Locale.current.regionCode ?? "us", language: Swift.String = Locale.current.languageCode ?? "en")
+  public init(userID: Swift.String, country: Swift.String, language: Swift.String)
+  public init(userID: Swift.String)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: SPUser, b: SPUser) -> Swift.Bool
   public var hashValue: Swift.Int {
