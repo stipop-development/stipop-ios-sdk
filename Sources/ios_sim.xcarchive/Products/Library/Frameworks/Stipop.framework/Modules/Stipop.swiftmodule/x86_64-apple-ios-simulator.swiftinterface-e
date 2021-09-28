@@ -1,17 +1,19 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Stipop
 import Foundation
 @_exported import Stipop
 import Swift
 import UIKit
-@objc @_inheritsConvenienceInitializers public class SPUIPickerView : UIKit.UIInputView {
-  weak public var delegate: Stipop.SPDelegate? {
+import _Concurrency
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SPUIPickerView : UIKit.UIInputView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: Stipop.SPDelegate? {
     get
     set
   }
-  @objc override dynamic public init(frame: CoreGraphics.CGRect, inputViewStyle: UIKit.UIInputView.Style)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, inputViewStyle: UIKit.UIInputView.Style)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToSuperview()
   @objc deinit
 }
 public struct SPPackage : Swift.Identifiable, Swift.Hashable, Swift.Codable {
@@ -54,13 +56,13 @@ public enum SPViewType {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers public class SPUIStickerView : UIKit.UIView {
-  public func setSticker(_ sticker: Stipop.SPSticker)
-  public func setSticker(_ sticker: Swift.String)
-  public func clearSticker()
-  @objc override dynamic public func layoutSubviews()
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SPUIStickerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func setSticker(_ sticker: Stipop.SPSticker)
+  @_Concurrency.MainActor(unsafe) public func setSticker(_ sticker: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func clearSticker()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Stipop {
@@ -94,58 +96,58 @@ public struct SPUser : Swift.Hashable {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers public class SPUIPackageIconView : UIKit.UIView {
-  public func setPackage(_ package: Stipop.SPPackage)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SPUIPackageIconView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func setPackage(_ package: Stipop.SPPackage)
   @available(*, deprecated, renamed: "clearPackage")
-  public func clearSticker()
-  public func clearPackage()
-  @objc override dynamic public var contentMode: UIKit.UIView.ContentMode {
-    @objc get
-    @objc set
+  @_Concurrency.MainActor(unsafe) public func clearSticker()
+  @_Concurrency.MainActor(unsafe) public func clearPackage()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var contentMode: UIKit.UIView.ContentMode {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
   }
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class SPUIButton : UIKit.UIButton {
-  weak public var delegate: Stipop.SPUIButtonDelegate?
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SPUIButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: Stipop.SPUIButtonDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-extension SPUIButton : UIKit.UIKeyInput {
-  @objc dynamic public var hasText: Swift.Bool {
+extension Stipop.SPUIButton : UIKit.UIKeyInput {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var hasText: Swift.Bool {
     @objc get
   }
-  @objc dynamic public func insertText(_ text: Swift.String)
-  @objc dynamic public func deleteBackward()
-  @objc override dynamic public var canBecomeFirstResponder: Swift.Bool {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func insertText(_ text: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func deleteBackward()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var canBecomeFirstResponder: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override dynamic public var canResignFirstResponder: Swift.Bool {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var canResignFirstResponder: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override dynamic public var inputView: UIKit.UIView? {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var inputView: UIKit.UIView? {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
 }
-@objc @_inheritsConvenienceInitializers public class SPUISearchViewController : UIKit.UIViewController {
-  weak public var delegate: Stipop.SPDelegate? {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SPUISearchViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: Stipop.SPDelegate? {
     get
     set
   }
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-extension SPUISearchViewController : UIKit.UICollectionViewDelegateFlowLayout {
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+extension Stipop.SPUISearchViewController : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
 }
-extension SPUISearchViewController : UIKit.UITextFieldDelegate {
-  @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
-  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+extension Stipop.SPUISearchViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
 }
 public struct SPSticker : Swift.Identifiable, Swift.Hashable, Swift.Codable {
   public static func == (lhs: Stipop.SPSticker, rhs: Stipop.SPSticker) -> Swift.Bool
