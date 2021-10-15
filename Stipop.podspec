@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Stipop'
-  s.version          = '0.2.1-beta.0'
+  s.version          = '0.2.1-rc.0'
   s.summary          = 'Stipop iOS UI SDK'
   s.description      = <<-DESC
 Welcome to Stipop iOS Sticker SDK. With just a simple integration process you can add optimized UI kit and over 270,000 unique stickers to your chat interface.
