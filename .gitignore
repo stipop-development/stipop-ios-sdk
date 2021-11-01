@@ -1,22 +1,6 @@
-.DS_Store
-/.build
-/Packages
-/*.xcodeproj
-xcuserdata/
-DerivedData/
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 
-
-# Created by https://www.toptal.com/developers/gitignore/api/macos,xcode,swift,swiftpackagemanager,swiftpm,objective-c,git,cocoapods,carthage
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,xcode,swift,swiftpackagemanager,swiftpm,objective-c,git,cocoapods,carthage
-
-### Carthage ###
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
+# Created by https://www.toptal.com/developers/gitignore/api/swift,cocoapods,swiftpackagemanager,xcode,macos,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=swift,cocoapods,swiftpackagemanager,xcode,macos,visualstudiocode
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
@@ -25,21 +9,6 @@ Carthage/Build
 #           - Also handy if you have a large number of dependant pods
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
 Pods/
-
-### Git ###
-# Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
-*.orig
-
-# Created by git when using merge tools for conflicts
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-*_BACKUP_*.txt
-*_BASE_*.txt
-*_LOCAL_*.txt
-*_REMOTE_*.txt
 
 ### macOS ###
 # General
@@ -70,8 +39,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### Objective-C ###
+### Swift ###
 # Xcode
+#
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
@@ -102,48 +72,6 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
-# CocoaPods
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-# Pods/
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# fastlane
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
-
-# Code Injection
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
-
-iOSInjectionProject/
-
-### Objective-C Patch ###
-
-### Swift ###
-# Xcode
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-
-
-
-
-
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
@@ -172,6 +100,7 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
+Carthage/Build/
 
 # Accio dependency management
 Dependencies/
@@ -183,20 +112,32 @@ Dependencies/
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
 
 # Code Injection
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
+iOSInjectionProject/
 
-### SwiftPackageManager ###
-Packages
-xcuserdata
-*.xcodeproj
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
+# Local History for Visual Studio Code
+.history/
 
-### SwiftPM ###
-
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
 
 ### Xcode ###
 # Xcode
@@ -215,4 +156,4 @@ xcuserdata
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,xcode,swift,swiftpackagemanager,swiftpm,objective-c,git,cocoapods,carthage
+# End of https://www.toptal.com/developers/gitignore/api/swift,cocoapods,swiftpackagemanager,xcode,macos,visualstudiocode

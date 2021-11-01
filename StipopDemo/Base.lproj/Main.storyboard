@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gRI-f9-IF7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tog-Kc-CRz">
+            <objects>
+                <viewController id="EaD-g7-NIK" customClass="SPDMainViewController" customModule="StipopDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fCg-ST-pRl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="4oZ-B1-C1N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-AW-L7K">
+                                <rect key="frame" x="30" y="118" width="354" height="497.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Stipop Demo App :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I02-An-xTE">
+                                        <rect key="frame" x="0.0" y="155" width="354" height="95.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iOc-0V-IOj">
+                                        <rect key="frame" x="117" y="80" width="120" height="45"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="14g-25-kX0"/>
+                                            <constraint firstAttribute="height" constant="45" id="e3F-2g-Heo"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="I02-An-xTE" secondAttribute="trailing" id="BjK-VI-juT"/>
+                                    <constraint firstItem="I02-An-xTE" firstAttribute="top" secondItem="iOc-0V-IOj" secondAttribute="bottom" constant="30" id="MLu-ef-aRN"/>
+                                    <constraint firstItem="iOc-0V-IOj" firstAttribute="centerX" secondItem="WDm-AW-L7K" secondAttribute="centerX" id="VDc-JJ-Cgq"/>
+                                    <constraint firstItem="I02-An-xTE" firstAttribute="leading" secondItem="WDm-AW-L7K" secondAttribute="leading" id="jyD-PJ-04d"/>
+                                    <constraint firstItem="iOc-0V-IOj" firstAttribute="top" secondItem="WDm-AW-L7K" secondAttribute="top" constant="80" id="wBH-aR-W8H"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90n-t0-huY">
+                                <rect key="frame" x="30" y="665.5" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iE7-Qt-vLb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="aaa"/>
+                                <buttonConfiguration key="configuration" style="filled" image="icGo" imagePlacement="trailing">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Try it now">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="24" bottom="0.0" trailing="24"/>
+                                    <color key="baseForegroundColor" red="1" green="0.36470588240000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tY9-Qu-fyX" kind="show" id="lad-Rg-TDm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyf-7R-imQ">
+                                <rect key="frame" x="157.5" y="745.5" width="99.5" height="31.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go to Docs">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToDemoAppButton:" destination="EaD-g7-NIK" eventType="touchUpInside" id="0bU-Ju-7uN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vyi-SC-Js9"/>
+                        <color key="backgroundColor" red="1" green="0.36470588240000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qyf-7R-imQ" firstAttribute="top" secondItem="90n-t0-huY" secondAttribute="bottom" constant="30" id="68k-Gi-FOz"/>
+                            <constraint firstItem="vyi-SC-Js9" firstAttribute="trailing" secondItem="WDm-AW-L7K" secondAttribute="trailing" constant="30" id="QHi-X1-bVn"/>
+                            <constraint firstItem="90n-t0-huY" firstAttribute="leading" secondItem="vyi-SC-Js9" secondAttribute="leading" constant="30" id="UAf-r7-DrA"/>
+                            <constraint firstItem="90n-t0-huY" firstAttribute="top" secondItem="WDm-AW-L7K" secondAttribute="bottom" constant="50" id="UT8-GS-LBH"/>
+                            <constraint firstItem="vyi-SC-Js9" firstAttribute="trailing" secondItem="4oZ-B1-C1N" secondAttribute="trailing" id="VDv-g1-8RI"/>
+                            <constraint firstAttribute="bottom" secondItem="4oZ-B1-C1N" secondAttribute="bottom" id="dLn-ZX-glv"/>
+                            <constraint firstItem="4oZ-B1-C1N" firstAttribute="top" secondItem="fCg-ST-pRl" secondAttribute="top" id="fch-ec-ii5"/>
+                            <constraint firstItem="WDm-AW-L7K" firstAttribute="leading" secondItem="vyi-SC-Js9" secondAttribute="leading" constant="30" id="gr5-hW-GCs"/>
+                            <constraint firstItem="vyi-SC-Js9" firstAttribute="bottom" secondItem="Qyf-7R-imQ" secondAttribute="bottom" constant="85" id="lb4-yU-3C6"/>
+                            <constraint firstItem="vyi-SC-Js9" firstAttribute="trailing" secondItem="90n-t0-huY" secondAttribute="trailing" constant="30" id="nac-qv-TQI"/>
+                            <constraint firstItem="WDm-AW-L7K" firstAttribute="top" secondItem="vyi-SC-Js9" secondAttribute="top" constant="30" id="qMz-W4-sQe"/>
+                            <constraint firstItem="4oZ-B1-C1N" firstAttribute="leading" secondItem="vyi-SC-Js9" secondAttribute="leading" id="vmN-n9-tzx"/>
+                            <constraint firstItem="Qyf-7R-imQ" firstAttribute="centerX" secondItem="fCg-ST-pRl" secondAttribute="centerX" id="waS-Dg-xPm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DaD-23-e1W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWY-rJ-WjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="87.723214285714278"/>
+        </scene>
+        <!--SPDChatroomViewController-->
+        <scene sceneID="Dxb-rF-McS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SPDChatroomViewController" id="tY9-Qu-fyX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5NN-ex-QvY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhE-sm-CpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pea-WH-mBE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gRI-f9-IF7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0pu-3j-dtk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EaD-g7-NIK" kind="relationship" relationship="rootViewController" id="uS0-C2-8K1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCa-oc-rDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="375" height="812"/>
+        <image name="icGo" width="27" height="26"/>
+        <image name="logo" width="121" height="43"/>
+    </resources>
+</document>

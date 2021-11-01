@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; configuration.title = "Try it now"; ObjectID = "90n-t0-huY"; */
+"90n-t0-huY.configuration.title" = "Try it now";
+
+/* Class = "UIButton"; normalTitle = "aaa"; ObjectID = "90n-t0-huY"; */
+"90n-t0-huY.normalTitle" = "aaa";
+
+/* Class = "UILabel"; text = "Welcome to Stipop Demo App :)"; ObjectID = "I02-An-xTE"; */
+"I02-An-xTE.text" = "Welcome to Stipop Demo App :)";
+
+/* Class = "UIButton"; configuration.title = "Go to Docs"; ObjectID = "Qyf-7R-imQ"; */
+"Qyf-7R-imQ.configuration.title" = "Go to Docs";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Qyf-7R-imQ"; */
+"Qyf-7R-imQ.normalTitle" = "Button";
