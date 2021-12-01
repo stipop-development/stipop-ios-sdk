@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Chatroom View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="SPDChatroomViewController" customModule="Stipop_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SPDChatroomViewController" customModule="StipopDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="173" id="8sD-SH-cpD" customClass="SPDChatroomHeaderCell" customModule="Stipop_Demo" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="173" id="8sD-SH-cpD" customClass="SPDChatroomHeaderCell" customModule="StipopDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="173"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8sD-SH-cpD" id="b1L-FZ-382">
@@ -64,7 +64,7 @@
                                             <outlet property="timeLabel" destination="rQD-HG-tuu" id="UeY-W8-9vv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CounterTextCell" rowHeight="55" id="DWs-9D-oRc" customClass="SPDCounterTextChatCell" customModule="Stipop_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CounterTextCell" rowHeight="55" id="DWs-9D-oRc" customClass="SPDCounterTextChatCell" customModule="StipopDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="217.5" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DWs-9D-oRc" id="GJI-Ey-b3E">
@@ -103,7 +103,7 @@
                                             <outlet property="contentLabel" destination="ein-wB-Bja" id="v9z-wC-8CI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CounterStickerCell" rowHeight="96" id="BfE-VB-XWM" customClass="SPDCounterStickerChatCell" customModule="Stipop_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CounterStickerCell" rowHeight="96" id="BfE-VB-XWM" customClass="SPDCounterStickerChatCell" customModule="StipopDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="272.5" width="414" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BfE-VB-XWM" id="nOR-uh-0uo">
@@ -142,7 +142,7 @@
                                             <outlet property="stickerView" destination="vdF-JR-OEW" id="f6d-mw-iwH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CounterExecuteCell" rowHeight="55" id="x16-Ad-8P6" customClass="SPDCounterExecuteChatCell" customModule="Stipop_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CounterExecuteCell" rowHeight="55" id="x16-Ad-8P6" customClass="SPDCounterExecuteChatCell" customModule="StipopDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="368.5" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x16-Ad-8P6" id="tjr-jJ-nfi">
@@ -174,7 +174,7 @@
                                             <outlet property="contentButton" destination="8BS-bL-mlF" id="jrE-ug-ywW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTextCell" rowHeight="55" id="kUq-8u-EIA" customClass="SPDMyTextChatCell" customModule="Stipop_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTextCell" rowHeight="55" id="kUq-8u-EIA" customClass="SPDMyTextChatCell" customModule="StipopDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="423.5" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kUq-8u-EIA" id="TFj-cH-Cdd">
@@ -213,7 +213,7 @@
                                             <outlet property="contentLabel" destination="VeR-ic-N3y" id="dT4-Iy-ieW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyStickerCell" rowHeight="96" id="l2N-av-s7d" customClass="SPDMyStickerChatCell" customModule="Stipop_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyStickerCell" rowHeight="96" id="l2N-av-s7d" customClass="SPDMyStickerChatCell" customModule="StipopDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="478.5" width="414" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l2N-av-s7d" id="beB-0M-S4G">
@@ -263,14 +263,13 @@
                                             <constraint firstAttribute="height" constant="32" id="lQn-eW-PFS"/>
                                             <constraint firstAttribute="width" constant="32" id="ujb-OO-moA"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icSpvNormal"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hH2-za-Txn">
-                                        <rect key="frame" x="50" y="6" width="349" height="38"/>
+                                        <rect key="frame" x="88" y="6" width="311" height="38"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-VK-gQB">
-                                                <rect key="frame" x="308" y="7" width="24" height="24"/>
+                                                <rect key="frame" x="270" y="7" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="XIU-nx-g88"/>
                                                     <constraint firstAttribute="height" constant="24" id="nta-6y-Lmg"/>
@@ -283,7 +282,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjM-M4-O7v">
-                                                <rect key="frame" x="17" y="3" width="287" height="32"/>
+                                                <rect key="frame" x="17" y="3" width="249" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -298,15 +297,26 @@
                                             <constraint firstItem="BjM-M4-O7v" firstAttribute="leading" secondItem="hH2-za-Txn" secondAttribute="leading" constant="17" id="xnm-6a-m4l"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT6-tn-Rab" customClass="SPUIButton" customModule="Stipop">
+                                        <rect key="frame" x="51" y="9" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="L7I-ko-ixl"/>
+                                            <constraint firstAttribute="height" constant="32" id="nnr-vz-4z9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icSsvNormal"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C6c-kg-bJH"/>
-                                    <constraint firstItem="hH2-za-Txn" firstAttribute="leading" secondItem="icp-zd-6CC" secondAttribute="trailing" constant="4" id="E0o-WG-w8D"/>
                                     <constraint firstItem="icp-zd-6CC" firstAttribute="centerY" secondItem="YEZ-IH-RnA" secondAttribute="centerY" id="GG8-B5-ZUr"/>
                                     <constraint firstAttribute="trailing" secondItem="hH2-za-Txn" secondAttribute="trailing" constant="15" id="OI4-ac-4Ej"/>
                                     <constraint firstItem="icp-zd-6CC" firstAttribute="leading" secondItem="YEZ-IH-RnA" secondAttribute="leading" constant="14" id="XeV-dm-7VU"/>
+                                    <constraint firstItem="hH2-za-Txn" firstAttribute="leading" secondItem="cT6-tn-Rab" secondAttribute="trailing" constant="5" id="cpu-8d-8bH"/>
                                     <constraint firstItem="hH2-za-Txn" firstAttribute="top" secondItem="YEZ-IH-RnA" secondAttribute="top" constant="6" id="dgj-OV-GYm"/>
+                                    <constraint firstItem="cT6-tn-Rab" firstAttribute="leading" secondItem="icp-zd-6CC" secondAttribute="trailing" constant="5" id="fZr-u9-MT0"/>
+                                    <constraint firstItem="cT6-tn-Rab" firstAttribute="centerY" secondItem="YEZ-IH-RnA" secondAttribute="centerY" id="kws-E5-Md6"/>
                                     <constraint firstAttribute="bottom" secondItem="hH2-za-Txn" secondAttribute="bottom" constant="6" id="sTq-ek-kPQ"/>
                                 </constraints>
                             </view>
@@ -327,7 +337,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZDo-BU-OED">
                         <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="V4E-SS-C2K" customClass="SPDChatroomNavigationTitleView" customModule="Stipop_Demo" customModuleProvider="target">
+                        <view key="titleView" contentMode="scaleToFill" id="V4E-SS-C2K" customClass="SPDChatroomNavigationTitleView" customModule="StipopDemo" customModuleProvider="target">
                             <rect key="frame" x="12" y="0.0" width="341" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -384,7 +394,8 @@
                         <outlet property="messageSendButton" destination="cHN-VK-gQB" id="GGh-aa-hX0"/>
                         <outlet property="moreButton" destination="zu5-Fk-OqC" id="X72-Vl-Byg"/>
                         <outlet property="navigationTitleView" destination="V4E-SS-C2K" id="3dX-zw-nIU"/>
-                        <outlet property="stipopButton" destination="icp-zd-6CC" id="qoc-6c-HWX"/>
+                        <outlet property="stipopPickerButton" destination="icp-zd-6CC" id="qoc-6c-HWX"/>
+                        <outlet property="stipopSearchButton" destination="cT6-tn-Rab" id="LpN-8c-zxC"/>
                         <outlet property="tableView" destination="Vtg-Nn-9Ig" id="3tw-rI-NhB"/>
                     </connections>
                 </viewController>
@@ -397,7 +408,7 @@
         <image name="icMore" width="24" height="24"/>
         <image name="icSendActive" width="24" height="24"/>
         <image name="icSendNormal" width="24" height="24"/>
-        <image name="icSpvNormal" width="32" height="32"/>
+        <image name="icSsvNormal" width="32" height="32"/>
         <image name="imgStipop" width="60" height="60"/>
         <image name="jay" width="400" height="400"/>
         <systemColor name="systemBackgroundColor">

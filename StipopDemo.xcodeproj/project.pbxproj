@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0345AB36272FB80D007B20F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB35272FB80D007B20F9 /* AppDelegate.swift */; };
 		0345AB38272FB80D007B20F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB37272FB80D007B20F9 /* SceneDelegate.swift */; };
-		0345AB3A272FB80D007B20F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB39272FB80D007B20F9 /* ViewController.swift */; };
 		0345AB3D272FB80D007B20F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0345AB3B272FB80D007B20F9 /* Main.storyboard */; };
 		0345AB3F272FB80F007B20F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0345AB3E272FB80F007B20F9 /* Assets.xcassets */; };
 		0345AB42272FB80F007B20F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0345AB40272FB80F007B20F9 /* LaunchScreen.storyboard */; };
@@ -31,7 +30,6 @@
 		0345AB32272FB80D007B20F9 /* StipopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StipopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0345AB35272FB80D007B20F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0345AB37272FB80D007B20F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0345AB39272FB80D007B20F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0345AB3C272FB80D007B20F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0345AB3E272FB80F007B20F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0345AB41272FB80F007B20F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		0345AB56272FB84F007B20F9 /* SPDChatroomHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDChatroomHeaderCell.swift; sourceTree = "<group>"; };
 		0345AB57272FB84F007B20F9 /* SPDMyTextChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDMyTextChatCell.swift; sourceTree = "<group>"; };
 		0345AB58272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDCounterExecuteChatCell.swift; sourceTree = "<group>"; };
+		0358A21227585E5100299464 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		0358A21327585E5200299464 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		03C1CFDA2732487800C16DE6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		03C1CFDB2732487800C16DE6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		03C1CFDC273248AB00C16DE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -90,7 +90,6 @@
 			children = (
 				0345AB35272FB80D007B20F9 /* AppDelegate.swift */,
 				0345AB37272FB80D007B20F9 /* SceneDelegate.swift */,
-				0345AB39272FB80D007B20F9 /* ViewController.swift */,
 				0345AB3B272FB80D007B20F9 /* Main.storyboard */,
 				0345AB3E272FB80F007B20F9 /* Assets.xcassets */,
 				0345AB40272FB80F007B20F9 /* LaunchScreen.storyboard */,
@@ -199,6 +198,7 @@
 				"zh-Hans",
 				"zh-Hant",
 				fr,
+				vi,
 			);
 			mainGroup = 0345AB29272FB80D007B20F9;
 			packageReferences = (
@@ -232,7 +232,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0345AB3A272FB80D007B20F9 /* ViewController.swift in Sources */,
 				0345AB5C272FB84F007B20F9 /* SPDChatroomViewController.swift in Sources */,
 				0345AB36272FB80D007B20F9 /* AppDelegate.swift in Sources */,
 				0345AB59272FB84F007B20F9 /* SPChat.swift in Sources */,
@@ -259,6 +258,7 @@
 				03C1CFDC273248AB00C16DE6 /* zh-Hans */,
 				03C1CFDE273248B200C16DE6 /* zh-Hant */,
 				03C1CFE0273248E500C16DE6 /* fr */,
+				0358A21227585E5100299464 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -271,6 +271,7 @@
 				03C1CFDD273248AB00C16DE6 /* zh-Hans */,
 				03C1CFDF273248B200C16DE6 /* zh-Hant */,
 				03C1CFE1273248E500C16DE6 /* fr */,
+				0358A21327585E5200299464 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -403,6 +404,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StipopDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Stipop SDK Demo";
@@ -431,6 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StipopDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Stipop SDK Demo";
@@ -481,7 +484,7 @@
 			repositoryURL = "https://github.com/stipop-development/stipop-ios-sdk";
 			requirement = {
 				kind = exactVersion;
-				version = 0.2.1;
+				version = "0.3.0-beta.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

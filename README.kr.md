@@ -45,7 +45,7 @@ git clone https://github.com/stipop-development/stipop-ios-sdk
 
 #### By XCode
 
-File > Swift Packages > Add Package Dependency... 에 들어가서  
+File > Swift Packages > Add Package Dependency... 에 들어가서
 `https://github.com/stipop-development/stipop-ios-sdk`을 입력하고, 사용하고 싶은 버전을 선택하여 설치하세요.
 
 #### By Package.swift
@@ -54,7 +54,7 @@ Swift Package가 있다면, Package.swift의 dependency에 추가하세요.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.2.1"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.3.0-beta.0"))
 ]
 ```
 
@@ -63,7 +63,7 @@ dependencies: [
 아래 코드를 `Podfile`에 붙여넣고 `pod install`로 설치하세요
 
 ```ruby
-pod 'Stipop', '~> 0.2.1'
+pod 'Stipop'
 ```
 
 ## Contact us

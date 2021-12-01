@@ -12,7 +12,8 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var navigationTitleView: UIView!
     @IBOutlet weak var moreButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var stipopButton: SPUIButton!
+    @IBOutlet weak var stipopPickerButton: SPUIButton!
+    @IBOutlet weak var stipopSearchButton: SPUIButton!
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var messageFieldBubble: UIView!
     @IBOutlet weak var messageFieldBottomConstraint: NSLayoutConstraint!
@@ -42,8 +43,12 @@ class SPDChatroomViewController: UIViewController {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) { [weak self] in
             self?.appendChat(.execution(.counter, "Try Sticker Picker View 😀", {
-                self?.stipopButton.sendActions(for: .touchUpInside)
+                self?.stipopPickerButton.sendActions(for: .touchUpInside)
                 self?.appendChat(.text(.me, "Let me try Sticker Picker View 😀"))
+            }))
+            self?.appendChat(.execution(.counter, "Try Sticker Search View 🔍", {
+                self?.stipopSearchButton.sendActions(for: .touchUpInside)
+                self?.appendChat(.text(.me, "Let me try Sticker Search View 🔍"))
             }))
         }
     }
@@ -123,7 +128,13 @@ extension SPDChatroomViewController {
     }
     
     func configureStipopButton() {
-        stipopButton.delegate = self
+        let user = SPUser(userID: "some_user_id")
+        
+        stipopPickerButton.setUser(user, viewType: .picker)
+        stipopPickerButton.delegate = self
+        
+        stipopSearchButton.setUser(user, viewType: .search)
+        stipopSearchButton.delegate = self
     }
     
     func appendChat(_ chat: SPDChatModel) {
@@ -138,16 +149,8 @@ extension SPDChatroomViewController {
     }
 }
 
-extension SPDChatroomViewController: SPUIButtonDelegate {
-    var viewType: SPViewType {
-        return .picker
-    }
-    
-    var user: SPUser {
-        return SPUser(userID: "sample_user_id")
-    }
-    
-    func onStickerSelect(_ sticker: SPSticker) {
+extension SPDChatroomViewController: SPUIDelegate {
+    func spViewDidSelectSticker(_ view: SPUIView, sticker: SPSticker) {
         appendChat(.sticker(.me, sticker.stickerImg))
     }
 }

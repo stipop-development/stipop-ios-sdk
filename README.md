@@ -24,7 +24,7 @@ Stipop SDK provides over 150,000 .png and .gif stickers that can be easily integ
 
 ## Try demo(for XCode 13.0+)
 
-1. Download(or Clone) Demo App  
+1. Download(or Clone) Demo App
    (SPM or Cocoapods Adjustment is not necessary)
 
 ```bash
@@ -45,7 +45,7 @@ git clone https://github.com/stipop-development/stipop-ios-sdk
 
 #### By XCode
 
-Go to File > Swift Packages > Add Package Dependency...  
+Go to File > Swift Packages > Add Package Dependency...
 Enter `https://github.com/stipop-development/stipop-ios-sdk`. Then select a version you want to use.
 
 #### By Package.swift
@@ -54,7 +54,7 @@ If you have a Swift Package, add dependency into Package.swift
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.2.1"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.3.0-beta.0"))
 ]
 ```
 
@@ -63,7 +63,7 @@ dependencies: [
 Copy & Paste below into `Podfile`. Then, run `pod install`.
 
 ```ruby
-pod 'Stipop', '~> 0.2.1'
+pod 'Stipop'
 ```
 
 ## Contact us
