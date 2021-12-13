@@ -1,5 +1,5 @@
 [English](./README.md) | [한국어](./README.kr.md)
-![Cover image](https://user-images.githubusercontent.com/30883319/145152815-acbdae25-75b6-48da-854a-1dfacc4ef016.png)
+![Cover image](https://user-images.githubusercontent.com/30883319/139041228-f88b6e2f-4523-4d56-913e-927956e88dc6.png)
 
 # Stipop UI SDK for iOS
 
@@ -54,7 +54,7 @@ Swift Package가 있다면, Package.swift의 dependency에 추가하세요.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.3.0-beta.0"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.3.0-beta.1"))
 ]
 ```
 
