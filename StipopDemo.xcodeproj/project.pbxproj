@@ -489,7 +489,7 @@
 			repositoryURL = "https://github.com/stipop-development/stipop-ios-sdk";
 			requirement = {
 				kind = exactVersion;
-				version = "0.3.0-beta.3";
+				version = 0.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
