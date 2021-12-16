@@ -47,6 +47,8 @@
 		0345AB58272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDCounterExecuteChatCell.swift; sourceTree = "<group>"; };
 		0358A21227585E5100299464 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		0358A21327585E5200299464 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		039EBAC7276B177700015364 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
+		039EBAC8276B177700015364 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		03C1CFDA2732487800C16DE6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		03C1CFDB2732487800C16DE6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		03C1CFDC273248AB00C16DE6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				"zh-Hant",
 				fr,
 				vi,
+				hi,
 			);
 			mainGroup = 0345AB29272FB80D007B20F9;
 			packageReferences = (
@@ -259,6 +262,7 @@
 				03C1CFDE273248B200C16DE6 /* zh-Hant */,
 				03C1CFE0273248E500C16DE6 /* fr */,
 				0358A21227585E5100299464 /* vi */,
+				039EBAC7276B177700015364 /* hi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -272,6 +276,7 @@
 				03C1CFDF273248B200C16DE6 /* zh-Hant */,
 				03C1CFE1273248E500C16DE6 /* fr */,
 				0358A21327585E5200299464 /* vi */,
+				039EBAC8276B177700015364 /* hi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -484,7 +489,7 @@
 			repositoryURL = "https://github.com/stipop-development/stipop-ios-sdk";
 			requirement = {
 				kind = exactVersion;
-				version = "0.3.0-beta.0";
+				version = "0.3.0-beta.3";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
