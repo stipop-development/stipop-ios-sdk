@@ -1,6 +1,4 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/swift,cocoapods,swiftpackagemanager,xcode,macos,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=swift,cocoapods,swiftpackagemanager,xcode,macos,visualstudiocode
+Stipop.plist
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template

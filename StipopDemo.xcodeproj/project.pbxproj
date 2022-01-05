@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034048962783DE8200A9AADA /* Stipop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 034048952783DE8200A9AADA /* Stipop.plist */; };
 		0345AB36272FB80D007B20F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB35272FB80D007B20F9 /* AppDelegate.swift */; };
 		0345AB38272FB80D007B20F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB37272FB80D007B20F9 /* SceneDelegate.swift */; };
 		0345AB3D272FB80D007B20F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0345AB3B272FB80D007B20F9 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034048952783DE8200A9AADA /* Stipop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stipop.plist; sourceTree = "<group>"; };
 		0345AB32272FB80D007B20F9 /* StipopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StipopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0345AB35272FB80D007B20F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0345AB37272FB80D007B20F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				0345AB49272FB84F007B20F9 /* Model */,
 				0345AB4B272FB84F007B20F9 /* View */,
 				0345AB43272FB80F007B20F9 /* Info.plist */,
+				034048952783DE8200A9AADA /* Stipop.plist */,
 			);
 			path = StipopDemo;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0345AB42272FB80F007B20F9 /* LaunchScreen.storyboard in Resources */,
+				034048962783DE8200A9AADA /* Stipop.plist in Resources */,
 				0345AB3F272FB80F007B20F9 /* Assets.xcassets in Resources */,
 				0345AB5B272FB84F007B20F9 /* SPDChatroomViewController.storyboard in Resources */,
 				0345AB3D272FB80D007B20F9 /* Main.storyboard in Resources */,
