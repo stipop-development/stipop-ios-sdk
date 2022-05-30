@@ -137,16 +137,6 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="87.723214285714278"/>
         </scene>
-        <!--SPDChatroomViewController-->
-        <scene sceneID="Dxb-rF-McS">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SPDChatroomViewController" id="tY9-Qu-fyX" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5NN-ex-QvY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BhE-sm-CpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1775" y="135"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pea-WH-mBE">
             <objects>
