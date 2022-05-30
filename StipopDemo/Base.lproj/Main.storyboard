@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gRI-f9-IF7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gRI-f9-IF7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-AW-L7K">
-                                <rect key="frame" x="30" y="118" width="354" height="497.5"/>
+                                <rect key="frame" x="30" y="118" width="354" height="447.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Stipop Demo App :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I02-An-xTE">
                                         <rect key="frame" x="0.0" y="155" width="354" height="95.5"/>
@@ -53,7 +53,7 @@
                                 <state key="normal" title="aaa"/>
                                 <buttonConfiguration key="configuration" style="filled" image="icGo" imagePlacement="trailing">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Try it now">
+                                        <fragment content="Common user login">
                                             <attributes>
                                                 <font key="NSFont" size="18" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -65,7 +65,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="tY9-Qu-fyX" kind="show" id="lad-Rg-TDm"/>
+                                    <action selector="commonUserLoginClicked:" destination="EaD-g7-NIK" eventType="touchUpInside" id="kth-be-COV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyf-7R-imQ">
@@ -85,15 +85,41 @@
                                     <action selector="goToDemoAppButton:" destination="EaD-g7-NIK" eventType="touchUpInside" id="0bU-Ju-7uN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYl-pm-IGr">
+                                <rect key="frame" x="30" y="595.5" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sLt-xy-rr1"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="aaa"/>
+                                <buttonConfiguration key="configuration" style="filled" image="icGo" imagePlacement="trailing">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="New user login">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="24" bottom="0.0" trailing="24"/>
+                                    <color key="baseForegroundColor" red="1" green="0.36470588240000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="newUserLoginClicked:" destination="EaD-g7-NIK" eventType="touchUpInside" id="D8C-No-YGp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vyi-SC-Js9"/>
                         <color key="backgroundColor" red="1" green="0.36470588240000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qyf-7R-imQ" firstAttribute="top" secondItem="90n-t0-huY" secondAttribute="bottom" constant="30" id="68k-Gi-FOz"/>
+                            <constraint firstItem="rYl-pm-IGr" firstAttribute="leading" secondItem="vyi-SC-Js9" secondAttribute="leading" constant="30" id="P3G-e8-FAf"/>
                             <constraint firstItem="vyi-SC-Js9" firstAttribute="trailing" secondItem="WDm-AW-L7K" secondAttribute="trailing" constant="30" id="QHi-X1-bVn"/>
+                            <constraint firstItem="vyi-SC-Js9" firstAttribute="trailing" secondItem="rYl-pm-IGr" secondAttribute="trailing" constant="30" id="Rk6-Xg-lw0"/>
                             <constraint firstItem="90n-t0-huY" firstAttribute="leading" secondItem="vyi-SC-Js9" secondAttribute="leading" constant="30" id="UAf-r7-DrA"/>
-                            <constraint firstItem="90n-t0-huY" firstAttribute="top" secondItem="WDm-AW-L7K" secondAttribute="bottom" constant="50" id="UT8-GS-LBH"/>
                             <constraint firstItem="vyi-SC-Js9" firstAttribute="trailing" secondItem="4oZ-B1-C1N" secondAttribute="trailing" id="VDv-g1-8RI"/>
+                            <constraint firstItem="rYl-pm-IGr" firstAttribute="top" secondItem="WDm-AW-L7K" secondAttribute="bottom" constant="30" id="cup-qe-nll"/>
                             <constraint firstAttribute="bottom" secondItem="4oZ-B1-C1N" secondAttribute="bottom" id="dLn-ZX-glv"/>
                             <constraint firstItem="4oZ-B1-C1N" firstAttribute="top" secondItem="fCg-ST-pRl" secondAttribute="top" id="fch-ec-ii5"/>
                             <constraint firstItem="WDm-AW-L7K" firstAttribute="leading" secondItem="vyi-SC-Js9" secondAttribute="leading" constant="30" id="gr5-hW-GCs"/>
@@ -102,6 +128,7 @@
                             <constraint firstItem="WDm-AW-L7K" firstAttribute="top" secondItem="vyi-SC-Js9" secondAttribute="top" constant="30" id="qMz-W4-sQe"/>
                             <constraint firstItem="4oZ-B1-C1N" firstAttribute="leading" secondItem="vyi-SC-Js9" secondAttribute="leading" id="vmN-n9-tzx"/>
                             <constraint firstItem="Qyf-7R-imQ" firstAttribute="centerX" secondItem="fCg-ST-pRl" secondAttribute="centerX" id="waS-Dg-xPm"/>
+                            <constraint firstItem="90n-t0-huY" firstAttribute="top" secondItem="rYl-pm-IGr" secondAttribute="bottom" constant="20" id="zan-gu-9UI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DaD-23-e1W"/>
@@ -118,7 +145,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhE-sm-CpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821" y="88"/>
+            <point key="canvasLocation" x="1775" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pea-WH-mBE">

@@ -9,6 +9,7 @@ import UIKit
 import Stipop
 
 class SPDChatroomViewController: UIViewController {
+    
     @IBOutlet weak var navigationTitleView: UIView!
     @IBOutlet weak var moreButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +19,9 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var messageFieldBubble: UIView!
     @IBOutlet weak var messageFieldBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageSendButton: UIButton!
+    
+    var user: SPUser!
+    
     @IBAction func messageSendButton(_ sender: Any) {
         if let text = messageField.text {
             appendChat(.text(.me, text))
@@ -128,7 +132,6 @@ extension SPDChatroomViewController {
     }
     
     func configureStipopButton() {
-        let user = SPUser(userID: "some_user_id")
         
         stipopPickerButton.setUser(user, viewType: .picker)
         stipopPickerButton.delegate = self
@@ -145,7 +148,9 @@ extension SPDChatroomViewController {
     
     func scrollChatToBottom() {
         let indexPath = IndexPath(row: self.chattings.count-1, section: 1)
+        DispatchQueue.main.async {
         self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Stipop
 
 class SPDMainViewController: UIViewController {
     
@@ -26,5 +27,27 @@ class SPDMainViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    @IBAction func newUserLoginClicked(_ sender: Any) {
+        
+        let userID = UUID().uuidString
+        
+        self.goToChatRoomVC(user: SPUser(userID: userID))
+    }
+    @IBAction func commonUserLoginClicked(_ sender: Any) {
+        
+        // userID must not include spacing
+        let userID = "some_user_id"
+        
+        self.goToChatRoomVC(user: SPUser(userID: userID))
+    }
+    private func goToChatRoomVC(user: SPUser){
+        
+        let storyboard: UIStoryboard? = UIStoryboard(name: "SPDChatroomViewController", bundle: nil)
+        guard let chatRoomVC = storyboard?.instantiateViewController(identifier: "SPDChatroomViewController") as? SPDChatroomViewController else { return }
+        
+        chatRoomVC.user = user
+        
+        self.navigationController?.pushViewController(chatRoomVC, animated: true)
     }
 }
