@@ -14,7 +14,6 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var moreButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var stipopPickerButton: SPUIButton!
-    @IBOutlet weak var stipopSearchButton: SPUIButton!
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var messageFieldBubble: UIView!
     @IBOutlet weak var messageFieldBottomConstraint: NSLayoutConstraint!
@@ -51,7 +50,6 @@ class SPDChatroomViewController: UIViewController {
                 self?.appendChat(.text(.me, "Let me try Sticker Picker View 😀"))
             }))
             self?.appendChat(.execution(.counter, "Try Sticker Search View 🔍", {
-                self?.stipopSearchButton.sendActions(for: .touchUpInside)
                 self?.appendChat(.text(.me, "Let me try Sticker Search View 🔍"))
             }))
         }
@@ -136,8 +134,6 @@ extension SPDChatroomViewController {
         stipopPickerButton.setUser(user, viewType: .picker)
         stipopPickerButton.delegate = self
         
-        stipopSearchButton.setUser(user, viewType: .search)
-        stipopSearchButton.delegate = self
     }
     
     func appendChat(_ chat: SPDChatModel) {

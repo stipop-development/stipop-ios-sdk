@@ -265,10 +265,10 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hH2-za-Txn">
-                                        <rect key="frame" x="88" y="6" width="311" height="38"/>
+                                        <rect key="frame" x="54" y="6" width="345" height="38"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-VK-gQB">
-                                                <rect key="frame" x="270" y="7" width="24" height="24"/>
+                                                <rect key="frame" x="305" y="7" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="XIU-nx-g88"/>
                                                     <constraint firstAttribute="height" constant="24" id="nta-6y-Lmg"/>
@@ -281,7 +281,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjM-M4-O7v">
-                                                <rect key="frame" x="17" y="3" width="249" height="32"/>
+                                                <rect key="frame" x="17" y="3" width="284" height="32"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -289,7 +289,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="cHN-VK-gQB" secondAttribute="trailing" constant="17" id="8Ht-0Q-2Q7"/>
+                                            <constraint firstAttribute="trailing" secondItem="cHN-VK-gQB" secondAttribute="trailing" constant="16" id="8Ht-0Q-2Q7"/>
                                             <constraint firstAttribute="bottom" secondItem="BjM-M4-O7v" secondAttribute="bottom" constant="3" id="YQR-Rm-Wcb"/>
                                             <constraint firstItem="cHN-VK-gQB" firstAttribute="leading" secondItem="BjM-M4-O7v" secondAttribute="trailing" constant="4" id="fW2-x5-QFL"/>
                                             <constraint firstItem="cHN-VK-gQB" firstAttribute="centerY" secondItem="hH2-za-Txn" secondAttribute="centerY" id="pbW-1W-1V5"/>
@@ -297,15 +297,6 @@
                                             <constraint firstItem="BjM-M4-O7v" firstAttribute="leading" secondItem="hH2-za-Txn" secondAttribute="leading" constant="17" id="xnm-6a-m4l"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT6-tn-Rab" customClass="SPUIButton" customModule="Stipop">
-                                        <rect key="frame" x="51" y="9" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="L7I-ko-ixl"/>
-                                            <constraint firstAttribute="height" constant="32" id="nnr-vz-4z9"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icSsvNormal"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -313,11 +304,9 @@
                                     <constraint firstItem="icp-zd-6CC" firstAttribute="centerY" secondItem="YEZ-IH-RnA" secondAttribute="centerY" id="GG8-B5-ZUr"/>
                                     <constraint firstAttribute="trailing" secondItem="hH2-za-Txn" secondAttribute="trailing" constant="15" id="OI4-ac-4Ej"/>
                                     <constraint firstItem="icp-zd-6CC" firstAttribute="leading" secondItem="YEZ-IH-RnA" secondAttribute="leading" constant="14" id="XeV-dm-7VU"/>
-                                    <constraint firstItem="hH2-za-Txn" firstAttribute="leading" secondItem="cT6-tn-Rab" secondAttribute="trailing" constant="5" id="cpu-8d-8bH"/>
                                     <constraint firstItem="hH2-za-Txn" firstAttribute="top" secondItem="YEZ-IH-RnA" secondAttribute="top" constant="6" id="dgj-OV-GYm"/>
-                                    <constraint firstItem="cT6-tn-Rab" firstAttribute="leading" secondItem="icp-zd-6CC" secondAttribute="trailing" constant="5" id="fZr-u9-MT0"/>
-                                    <constraint firstItem="cT6-tn-Rab" firstAttribute="centerY" secondItem="YEZ-IH-RnA" secondAttribute="centerY" id="kws-E5-Md6"/>
                                     <constraint firstAttribute="bottom" secondItem="hH2-za-Txn" secondAttribute="bottom" constant="6" id="sTq-ek-kPQ"/>
+                                    <constraint firstItem="hH2-za-Txn" firstAttribute="leading" secondItem="icp-zd-6CC" secondAttribute="trailing" constant="8" id="wO1-Gb-4uH"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -395,7 +384,6 @@
                         <outlet property="moreButton" destination="zu5-Fk-OqC" id="X72-Vl-Byg"/>
                         <outlet property="navigationTitleView" destination="V4E-SS-C2K" id="3dX-zw-nIU"/>
                         <outlet property="stipopPickerButton" destination="icp-zd-6CC" id="qoc-6c-HWX"/>
-                        <outlet property="stipopSearchButton" destination="cT6-tn-Rab" id="LpN-8c-zxC"/>
                         <outlet property="tableView" destination="Vtg-Nn-9Ig" id="3tw-rI-NhB"/>
                     </connections>
                 </viewController>
@@ -408,7 +396,6 @@
         <image name="icMore" width="24" height="24"/>
         <image name="icSendActive" width="24" height="24"/>
         <image name="icSendNormal" width="24" height="24"/>
-        <image name="icSsvNormal" width="32" height="32"/>
         <image name="imgStipop" width="60" height="60"/>
         <image name="jay" width="400" height="400"/>
     </resources>
