@@ -20,8 +20,8 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var messageSendButton: UIButton!
     
     var user: SPUser!
-    
-    @IBAction func messageSendButton(_ sender: Any) {
+
+    @IBAction func messageSend(_ sender: Any) {
         if let text = messageField.text {
             appendChat(.text(.me, text))
             messageField.text = ""
@@ -33,6 +33,7 @@ class SPDChatroomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureNavigationBar()
         configureTableView()
         configureMoreButton()
@@ -41,16 +42,12 @@ class SPDChatroomViewController: UIViewController {
         
         appendChat(.text(.counter, "Hi, there!👋"))
         appendChat(.sticker(.counter, "https://img.stipop.io/2020/3/31/1585719674256_CookieArrow_size.gif"))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             self?.appendChat(.text(.counter, "Welcome to Stipop SDK!\nPress the button below to get started."))
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) { [weak self] in
-            self?.appendChat(.execution(.counter, "Try Sticker Picker View 😀", {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            self?.appendChat(.execution(.counter, "Try the sticker feature. ⬇", {
                 self?.stipopPickerButton.sendActions(for: .touchUpInside)
-                self?.appendChat(.text(.me, "Let me try Sticker Picker View 😀"))
-            }))
-            self?.appendChat(.execution(.counter, "Try Sticker Search View 🔍", {
-                self?.appendChat(.text(.me, "Let me try Sticker Search View 🔍"))
             }))
         }
     }
@@ -151,7 +148,13 @@ extension SPDChatroomViewController {
 }
 
 extension SPDChatroomViewController: SPUIDelegate {
-    func spViewDidSelectSticker(_ view: SPUIView, sticker: SPSticker) {
+    
+    func onStickerSingleTapped(_ view: SPUIView, sticker: SPSticker) {
+        appendChat(.sticker(.me, sticker.stickerImg))
+    }
+    
+    // If you use double tap feature, implements this function.
+    func onStickerDoubleTapped(_ view: SPUIView, sticker: SPSticker) {
         appendChat(.sticker(.me, sticker.stickerImg))
     }
 }
