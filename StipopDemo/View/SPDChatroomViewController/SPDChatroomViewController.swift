@@ -46,7 +46,7 @@ class SPDChatroomViewController: UIViewController {
             self?.appendChat(.text(.counter, "Welcome to Stipop SDK!\nPress the button below to get started."))
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
-            self?.appendChat(.execution(.counter, "Try the sticker feature. ⬇", {
+            self?.appendChat(.execution(.counter, "Try the sticker feature. 🔽", {
                 self?.stipopPickerButton.sendActions(for: .touchUpInside)
             }))
         }
