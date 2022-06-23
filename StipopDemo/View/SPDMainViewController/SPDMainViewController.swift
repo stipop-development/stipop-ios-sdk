@@ -11,7 +11,7 @@ import Stipop
 class SPDMainViewController: UIViewController {
     
     @IBAction func goToDemoAppButton(_ sender: Any) {
-        guard let url = URL(string: "https://docs.stipop.io/en/sdk/ios/get-started/quick-start") else { return }
+        guard let url = URL(string: "https://docs.stipop.io/en/sdk/ios/get-started/before-you-begin") else { return }
         UIApplication.shared.open(url)
     }
     
@@ -37,7 +37,7 @@ class SPDMainViewController: UIViewController {
     @IBAction func commonUserLoginClicked(_ sender: Any) {
         
         // userID must not include spacing
-        let userID = "some_user_id"
+        let userID = "someone_user_id"
         
         self.goToChatRoomVC(user: SPUser(userID: userID))
     }

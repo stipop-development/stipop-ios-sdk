@@ -20,7 +20,7 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var messageSendButton: UIButton!
     
     var user: SPUser!
-
+    
     @IBAction func messageSend(_ sender: Any) {
         if let text = messageField.text {
             appendChat(.text(.me, text))
@@ -39,31 +39,33 @@ class SPDChatroomViewController: UIViewController {
         configureMoreButton()
         configureMessageFields()
         configureStipopButton()
+        makeBubbles()
         
-        appendChat(.text(.counter, "Hi, there!👋"))
-        appendChat(.sticker(.counter, "https://img.stipop.io/2020/3/31/1585719674256_CookieArrow_size.gif"))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            self?.appendChat(.text(.counter, "Welcome to Stipop SDK!\nPress the button below to get started."))
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
-            self?.appendChat(.execution(.counter, "Try the sticker feature. 🔽", {
-                self?.stipopPickerButton.sendActions(for: .touchUpInside)
-            }))
-        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        messageFieldBubble.layer.borderColor = UIColor(named: ColorEnum.StipopTextFieldBackgroundStroke)?.cgColor
     }
 }
 
 extension SPDChatroomViewController {
     func configureNavigationBar() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = #colorLiteral(red: 1, green: 0.4078431373, blue: 0.1058823529, alpha: 1)
+        configureNavigationBarTopView()
+    }
+    
+    func configureNavigationBarTopView(){
+        let navigationBarTopView = UIView()
+        navigationBarTopView.backgroundColor = UIColor(named: ColorEnum.StipopMain)
         
-        self.navigationController?.navigationBar.standardAppearance = appearance
-        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        self.navigationController?.navigationBar.compactScrollEdgeAppearance = appearance
-        self.navigationController?.navigationBar.compactScrollEdgeAppearance = appearance
-        self.navigationController?.navigationBar.tintColor = .white
+        view.addSubview(navigationBarTopView)
+        
+        let safeAreaTopInset = UIApplication.shared.windows[0].safeAreaInsets.top
+        
+        navigationBarTopView.translatesAutoresizingMaskIntoConstraints = false
+        navigationBarTopView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        navigationBarTopView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        navigationBarTopView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        navigationBarTopView.heightAnchor.constraint(equalToConstant: safeAreaTopInset).isActive = true
     }
     
     func configureTableView() {
@@ -82,19 +84,18 @@ extension SPDChatroomViewController {
         ])
         moreButton.menu = barButtonMenu
     }
+    
     func contactUs(action: UIAction) {
         guard let url = URL(string: "https://developers.stipop.io/contact-us") else { return }
         UIApplication.shared.open(url)
     }
+    
     func goToGithub(action: UIAction? = nil) {
         guard let url = URL(string: "https://github.com/stipop-development/stipop-ios-sdk") else { return }
         UIApplication.shared.open(url)
     }
     
     func configureMessageFields() {
-        messageFieldBubble.layer.cornerRadius = 20
-        messageFieldBubble.layer.borderColor = #colorLiteral(red: 0.8274509804, green: 0.8274509804, blue: 0.8274509804, alpha: 1)
-        messageFieldBubble.layer.borderWidth = 1
         messageField.addTarget(self, action: #selector(messageFieldDidChange(_:)), for: .editingChanged)
         
         NotificationCenter.default.addObserver(self,
@@ -106,6 +107,7 @@ extension SPDChatroomViewController {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
+    
     @objc func keyboardWillShow(_ notification: NSNotification) {
         if let userInfo = notification.userInfo,
            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
@@ -142,9 +144,23 @@ extension SPDChatroomViewController {
     func scrollChatToBottom() {
         let indexPath = IndexPath(row: self.chattings.count-1, section: 1)
         DispatchQueue.main.async {
-        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
+    
+    func makeBubbles(){
+        appendChat(.text(.counter, "Hi, there!👋"))
+        appendChat(.sticker(.counter, "https://img.stipop.io/2020/3/31/1585719674256_CookieArrow_size.gif"))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.appendChat(.text(.counter, "Welcome to Stipop SDK!\nPress the button below to get started."))
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.appendChat(.execution(.counter, "Try the sticker feature. 🔽", {
+                self?.stipopPickerButton.sendActions(for: .touchUpInside)
+            }))
+        }
+    }
+    
 }
 
 extension SPDChatroomViewController: SPUIDelegate {
