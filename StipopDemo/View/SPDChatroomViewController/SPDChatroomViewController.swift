@@ -18,8 +18,10 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var messageFieldBubble: UIView!
     @IBOutlet weak var messageFieldBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageSendButton: UIButton!
+    @IBOutlet weak var pickerViewPositionView: UIView!
     
-    var user: SPUser!
+    
+    var user: SPUser = SPUser(userID: "some_user_id")
     
     @IBAction func messageSend(_ sender: Any) {
         if let text = messageField.text {
@@ -67,29 +69,30 @@ extension SPDChatroomViewController {
         navigationBarTopView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         navigationBarTopView.heightAnchor.constraint(equalToConstant: safeAreaTopInset).isActive = true
     }
-    
     func configureTableView() {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
     }
     
     func configureMoreButton() {
-        let barButtonMenu = UIMenu(title: "", children: [
-            UIAction(title: "Contact us", handler: { [weak self] action in
-                self?.contactUs(action: action)
-            }),
-            UIAction(title: "Go to github", handler: { [weak self] action in
-                self?.goToGithub(action: action)
-            })
-        ])
-        moreButton.menu = barButtonMenu
+        if #available(iOS 15.0, *) {
+            let barButtonMenu = UIMenu(title: "", children: [
+                UIAction(title: "Contact us", handler: { [weak self] action in
+                    self?.contactUs(action: action)
+                }),
+                UIAction(title: "Go to github", handler: { [weak self] action in
+                    self?.goToGithub(action: action)
+                })
+            ])
+            moreButton.menu = barButtonMenu
+        }
     }
-    
+    @available(iOS 13.0, *)
     func contactUs(action: UIAction) {
         guard let url = URL(string: "https://developers.stipop.io/contact-us") else { return }
         UIApplication.shared.open(url)
     }
-    
+    @available(iOS 13.0, *)
     func goToGithub(action: UIAction? = nil) {
         guard let url = URL(string: "https://github.com/stipop-development/stipop-ios-sdk") else { return }
         UIApplication.shared.open(url)
@@ -107,7 +110,6 @@ extension SPDChatroomViewController {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
-    
     @objc func keyboardWillShow(_ notification: NSNotification) {
         if let userInfo = notification.userInfo,
            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
@@ -160,18 +162,29 @@ extension SPDChatroomViewController {
             }))
         }
     }
-    
 }
 
 extension SPDChatroomViewController: SPUIDelegate {
-    
     func onStickerSingleTapped(_ view: SPUIView, sticker: SPSticker) {
         appendChat(.sticker(.me, sticker.stickerImg))
     }
-    
-    // If you use double tap feature, implements this function.
     func onStickerDoubleTapped(_ view: SPUIView, sticker: SPSticker) {
         appendChat(.sticker(.me, sticker.stickerImg))
+    }
+    func pickerCustomViewSetup(_ pickerView: UIView) {
+        // 1. Add view.
+        self.view.addSubview(pickerView)
+
+        // 2. Custom picker view.
+        pickerView.alpha = 0.8
+
+        // 3. Set constraint.
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        pickerView.topAnchor.constraint(equalTo: self.pickerViewPositionView.topAnchor).isActive = true
+        pickerView.bottomAnchor.constraint(equalTo: self.pickerViewPositionView.bottomAnchor).isActive = true
+        pickerView.leadingAnchor.constraint(equalTo: self.pickerViewPositionView.leadingAnchor).isActive = true
+        pickerView.trailingAnchor.constraint(equalTo: self.pickerViewPositionView.trailingAnchor).isActive = true
+
     }
 }
 
@@ -234,5 +247,17 @@ extension SPDChatroomViewController: UITableViewDataSource {
             break
         }
         return UITableViewCell(style: .default, reuseIdentifier: "cell")
+    }
+}
+// 키보드 숨기기
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
