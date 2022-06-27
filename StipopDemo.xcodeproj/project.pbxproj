@@ -24,6 +24,8 @@
 		0345AB62272FB84F007B20F9 /* SPDMyTextChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB57272FB84F007B20F9 /* SPDMyTextChatCell.swift */; };
 		0345AB63272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB58272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift */; };
 		23AC95732844A28700200E93 /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 23AC95722844A28700200E93 /* Stipop */; };
+		5FC95C97286A6E52006823AA /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC95C96286A6E52006823AA /* Stipop */; };
+		5FC95C9A286A6E73006823AA /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC95C99286A6E73006823AA /* Stipop */; };
 		5FDC4C9228617189006D3D12 /* Stipop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9128617189006D3D12 /* Stipop.plist */; };
 		5FDC4C9528641F5F006D3D12 /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9428641F5F006D3D12 /* ColorEnum.swift */; };
 		5FDC4C9B286425C6006D3D12 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9A286425C6006D3D12 /* UIView+Extensions.swift */; };
@@ -71,6 +73,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				23AC95732844A28700200E93 /* Stipop in Frameworks */,
+				5FC95C9A286A6E73006823AA /* Stipop in Frameworks */,
+				5FC95C97286A6E52006823AA /* Stipop in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +198,8 @@
 			name = StipopDemo;
 			packageProductDependencies = (
 				23AC95722844A28700200E93 /* Stipop */,
+				5FC95C96286A6E52006823AA /* Stipop */,
+				5FC95C99286A6E73006823AA /* Stipop */,
 			);
 			productName = StipopDemo;
 			productReference = 0345AB32272FB80D007B20F9 /* StipopDemo.app */;
@@ -231,6 +237,8 @@
 			mainGroup = 0345AB29272FB80D007B20F9;
 			packageReferences = (
 				23AC95712844A28600200E93 /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */,
+				5FC95C95286A6E52006823AA /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */,
+				5FC95C98286A6E73006823AA /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */,
 			);
 			productRefGroup = 0345AB33272FB80D007B20F9 /* Products */;
 			projectDirPath = "";
@@ -520,12 +528,38 @@
 				kind = branch;
 			};
 		};
+		5FC95C95286A6E52006823AA /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stipop-development/stipop-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 0.7.0;
+			};
+		};
+		5FC95C98286A6E73006823AA /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stipop-development/stipop-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		23AC95722844A28700200E93 /* Stipop */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 23AC95712844A28600200E93 /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */;
+			productName = Stipop;
+		};
+		5FC95C96286A6E52006823AA /* Stipop */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC95C95286A6E52006823AA /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */;
+			productName = Stipop;
+		};
+		5FC95C99286A6E73006823AA /* Stipop */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC95C98286A6E73006823AA /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */;
 			productName = Stipop;
 		};
 /* End XCSwiftPackageProductDependency section */
