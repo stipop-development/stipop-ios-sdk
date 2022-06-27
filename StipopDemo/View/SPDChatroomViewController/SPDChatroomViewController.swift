@@ -171,7 +171,7 @@ extension SPDChatroomViewController: SPUIDelegate {
     func onStickerDoubleTapped(_ view: SPUIView, sticker: SPSticker) {
         appendChat(.sticker(.me, sticker.stickerImg))
     }
-    func pickerCustomViewSetup(_ pickerView: UIView) {
+    func pickerCustomViewSetup(_ view: SPUIView, pickerView: UIView) {
         // 1. Add view.
         self.view.addSubview(pickerView)
 

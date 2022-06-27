@@ -26,7 +26,7 @@
 		23AC95732844A28700200E93 /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 23AC95722844A28700200E93 /* Stipop */; };
 		5FC95C97286A6E52006823AA /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC95C96286A6E52006823AA /* Stipop */; };
 		5FC95C9A286A6E73006823AA /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC95C99286A6E73006823AA /* Stipop */; };
-		5FDC4C9228617189006D3D12 /* Stipop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9128617189006D3D12 /* Stipop.plist */; };
+		5FC95CA2286A744A006823AA /* Stipop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FC95CA1286A744A006823AA /* Stipop.plist */; };
 		5FDC4C9528641F5F006D3D12 /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9428641F5F006D3D12 /* ColorEnum.swift */; };
 		5FDC4C9B286425C6006D3D12 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9A286425C6006D3D12 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,7 @@
 		03C1CFDF273248B200C16DE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		03C1CFE0273248E500C16DE6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		03C1CFE1273248E500C16DE6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		5FDC4C9128617189006D3D12 /* Stipop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Stipop.plist; path = ../../../../../../../../plist_json/plist/demo/Stipop.plist; sourceTree = "<group>"; };
+		5FC95CA1286A744A006823AA /* Stipop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Stipop.plist; path = ../../../plist_json/plist/demo/Stipop.plist; sourceTree = "<group>"; };
 		5FDC4C9428641F5F006D3D12 /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
 		5FDC4C9A286425C6006D3D12 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 				0345AB49272FB84F007B20F9 /* Model */,
 				0345AB4B272FB84F007B20F9 /* View */,
 				0345AB43272FB80F007B20F9 /* Info.plist */,
-				5FDC4C9128617189006D3D12 /* Stipop.plist */,
+				5FC95CA1286A744A006823AA /* Stipop.plist */,
 			);
 			path = StipopDemo;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0345AB42272FB80F007B20F9 /* LaunchScreen.storyboard in Resources */,
-				5FDC4C9228617189006D3D12 /* Stipop.plist in Resources */,
+				5FC95CA2286A744A006823AA /* Stipop.plist in Resources */,
 				0345AB3F272FB80F007B20F9 /* Assets.xcassets in Resources */,
 				0345AB5B272FB84F007B20F9 /* SPDChatroomViewController.storyboard in Resources */,
 				0345AB3D272FB80D007B20F9 /* Main.storyboard in Resources */,
