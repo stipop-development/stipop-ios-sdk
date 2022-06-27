@@ -35,7 +35,7 @@ class SPDChatroomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        messageSendButton.isEnabled = false
         configureNavigationBar()
         configureTableView()
         configureMoreButton()
