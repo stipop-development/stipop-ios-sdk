@@ -1,8 +1,6 @@
 // swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
-
 let package = Package(
     name: "Stipop",
     products: [
@@ -16,8 +14,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Stipop",
-            url: "https://ios-sdk.stipop.com/0.7.1/Stipop.xcframework.zip",
-            checksum: "ed4a3ecdd1d698510caaf78535bcd9a155e6c421242494481e2e2a7b267ea9aa"
+            url: "https://ios-sdk.stipop.com/0.7.2/Stipop.xcframework.zip",
+            checksum: "ab77fa033aad7de3543ac30991167fa7546569f80edcbc7ee1d3d971f1a6b9bb"
         )
     ]
 )
