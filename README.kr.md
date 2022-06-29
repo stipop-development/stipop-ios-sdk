@@ -63,7 +63,7 @@ dependencies: [
 아래 코드를 `Podfile`에 붙여넣고 `pod install`로 설치하세요
 
 ```ruby
-pod 'Stipop'
+pod 'StipopUIKit'
 ```
 
 ## Contact us
