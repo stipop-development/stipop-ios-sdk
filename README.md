@@ -39,7 +39,7 @@ git clone https://github.com/stipop-development/stipop-ios-sdk
 
 <p align="center"><img src="https://user-images.githubusercontent.com/30883319/139041399-d4aee7d3-387f-4f9e-a045-f239a0cc2918.png"></p>
 
-## How to install in your project
+## Including in your project
 
 ### Swift Package Manager
 
@@ -64,6 +64,93 @@ Copy & Paste below into `Podfile`. Then, run `pod install`.
 
 ```ruby
 pod 'StipopUIKit'
+```
+
+
+How do I use Stipop SDK?
+-------------------
+
+1. Add Stipop.plist file into the project.
+2. Import Stipop and Initialize Stipop SDK before use at AppDelegate.
+```swift
+import UIKit
+import Stipop
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+//    let semaphore = DispatchSemaphore(value: 1)
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        
+        // If you want to use SAuth, execute setSAuthDelegate method.
+        // *setSAuthDelegate() should be typed before initialize()
+        // Stipop.setSAuthDelegate(sAuthDelegate: self)
+        Stipop.initialize()
+        return true
+    }
+    
+    ...
+}
+/* If you use SAuth, implement SAuthDelegate and refresh accessToken when authorization error occured. */
+/*
+extension AppDelegate: SAuthDelegate {
+    
+    func httpError(apiEnum: SPAPIEnum, error: SPError) {
+        print("⚡️Stipop: HTTP Error => \(apiEnum)")
+        DispatchQueue.global().async {
+            self.semaphore.wait()
+            DemoSAuthManager.getAccessTokenIfOverExpiryTime(userId: Stipop.getUser().userID, completion: { accessToken in
+                self.semaphore.signal()
+                guard let accessToken = accessToken else { return }
+                Stipop.setAccessToken(accessToken: accessToken)
+                SAuthManager.reRequest(api: apiEnum)
+            })
+        }
+    }
+}
+ */
+```
+3. Go to the View Controller where you want to place the button. Then, Initialize SPUIButton and connect delegate.
+
+```swift
+import UIKit
+import Stipop
+
+class ViewController: UIViewController {
+  
+    let stipopButton = SPUIButton(type: .system)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.view.addSubview(stipopButton)
+        stipopButton.translatesAutoresizingMaskIntoConstraints = false
+        stipopButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stipopButton.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        stipopButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        stipopButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+
+        let user = SPUser(userID: "some_user_id")
+        stipopButton.setUser(user, viewType: .picker)
+        stipopButton.delegate = self
+    }
+}
+
+extension ViewController: SPUIDelegate {
+ 
+    func onStickerSingleTapped(_ view: SPUIView, sticker: SPSticker) {
+        // This function will be executed when user chooses a sticker.
+    }
+  
+    /* If you want to use double tap feature, change the plist file and implement this function. */
+    func onStickerDoubleTapped(_ view: SPUIView, sticker: SPSticker) {
+        // This function will be executed when user chooses a sticker.
+    }
+  
+}
 ```
 
 ## Contact us
