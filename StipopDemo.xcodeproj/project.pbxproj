@@ -24,6 +24,10 @@
 		0345AB62272FB84F007B20F9 /* SPDMyTextChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB57272FB84F007B20F9 /* SPDMyTextChatCell.swift */; };
 		0345AB63272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB58272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift */; };
 		23AC95732844A28700200E93 /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 23AC95722844A28700200E93 /* Stipop */; };
+		5F05EFC52891B2CD00E526FC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F05EFC42891B2CD00E526FC /* Alamofire */; };
+		5F1B860B2891B198005F85AD /* DemoSAuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B860A2891B198005F85AD /* DemoSAuthAPI.swift */; };
+		5F1B860D2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B860C2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift */; };
+		5F1B860F2891B1AA005F85AD /* DemoSAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B860E2891B1AA005F85AD /* DemoSAuthManager.swift */; };
 		5FC95CAC286A94F7006823AA /* Stipop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FC95CAB286A94F7006823AA /* Stipop.plist */; };
 		5FDC4C9528641F5F006D3D12 /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9428641F5F006D3D12 /* ColorEnum.swift */; };
 		5FDC4C9B286425C6006D3D12 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC4C9A286425C6006D3D12 /* UIView+Extensions.swift */; };
@@ -60,6 +64,9 @@
 		03C1CFDF273248B200C16DE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		03C1CFE0273248E500C16DE6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		03C1CFE1273248E500C16DE6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5F1B860A2891B198005F85AD /* DemoSAuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSAuthAPI.swift; sourceTree = "<group>"; };
+		5F1B860C2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSAuthAPI_access_token.swift; sourceTree = "<group>"; };
+		5F1B860E2891B1AA005F85AD /* DemoSAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSAuthManager.swift; sourceTree = "<group>"; };
 		5FC95CAB286A94F7006823AA /* Stipop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Stipop.plist; path = ../../../../../../../../plist_json/plist/demo/Stipop.plist; sourceTree = "<group>"; };
 		5FDC4C9428641F5F006D3D12 /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
 		5FDC4C9A286425C6006D3D12 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23AC95732844A28700200E93 /* Stipop in Frameworks */,
+				5F05EFC52891B2CD00E526FC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,7 @@
 		0345AB34272FB80D007B20F9 /* StipopDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5F1B86092891B188005F85AD /* StipopAuth */,
 				5FDC4C99286425BC006D3D12 /* Extensions */,
 				5FDC4C9328641F4E006D3D12 /* Enums */,
 				0345AB35272FB80D007B20F9 /* AppDelegate.swift */,
@@ -160,6 +169,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5F1B86092891B188005F85AD /* StipopAuth */ = {
+			isa = PBXGroup;
+			children = (
+				5F1B860A2891B198005F85AD /* DemoSAuthAPI.swift */,
+				5F1B860C2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift */,
+				5F1B860E2891B1AA005F85AD /* DemoSAuthManager.swift */,
+			);
+			path = StipopAuth;
+			sourceTree = "<group>";
+		};
 		5FDC4C9328641F4E006D3D12 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +213,7 @@
 			name = StipopDemo;
 			packageProductDependencies = (
 				23AC95722844A28700200E93 /* Stipop */,
+				5F05EFC42891B2CD00E526FC /* Alamofire */,
 			);
 			productName = StipopDemo;
 			productReference = 0345AB32272FB80D007B20F9 /* StipopDemo.app */;
@@ -231,6 +251,7 @@
 			mainGroup = 0345AB29272FB80D007B20F9;
 			packageReferences = (
 				23AC95712844A28600200E93 /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */,
+				5F05EFC32891B2CD00E526FC /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 0345AB33272FB80D007B20F9 /* Products */;
 			projectDirPath = "";
@@ -269,12 +290,15 @@
 				0345AB38272FB80D007B20F9 /* SceneDelegate.swift in Sources */,
 				0345AB60272FB84F007B20F9 /* SPDCounterTextChatCell.swift in Sources */,
 				0345AB61272FB84F007B20F9 /* SPDChatroomHeaderCell.swift in Sources */,
+				5F1B860B2891B198005F85AD /* DemoSAuthAPI.swift in Sources */,
 				0345AB5F272FB84F007B20F9 /* SPDChatroomNavigationTitleView.swift in Sources */,
 				0345AB62272FB84F007B20F9 /* SPDMyTextChatCell.swift in Sources */,
 				0345AB5D272FB84F007B20F9 /* SPDMyStickerChatCell.swift in Sources */,
 				5FDC4C9528641F5F006D3D12 /* ColorEnum.swift in Sources */,
 				0345AB5E272FB84F007B20F9 /* SPDCounterStickerChatCell.swift in Sources */,
 				0345AB5A272FB84F007B20F9 /* SPDMainViewController.swift in Sources */,
+				5F1B860D2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift in Sources */,
+				5F1B860F2891B1AA005F85AD /* DemoSAuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +544,14 @@
 				kind = branch;
 			};
 		};
+		5F05EFC32891B2CD00E526FC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -527,6 +559,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 23AC95712844A28600200E93 /* XCRemoteSwiftPackageReference "stipop-ios-sdk" */;
 			productName = Stipop;
+		};
+		5F05EFC42891B2CD00E526FC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F05EFC32891B2CD00E526FC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
