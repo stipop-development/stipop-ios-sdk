@@ -14,8 +14,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Stipop",
-            url: "https://ios-sdk.stipop.com/0.7.3/Stipop.xcframework.zip",
-            checksum: "5fea6956c33e1ca4763c6cea0adfe48427d27900a2fad9fb3a5203cd72f9684e"
+            url: "https://ios-sdk.stipop.com/0.9.0-beta.1/Stipop.xcframework.zip",
+            checksum: "d6840089902f87f1a5d955aa83da6aa6b28f1fcd7249c2556b102d490f218c70"
         )
     ]
 )

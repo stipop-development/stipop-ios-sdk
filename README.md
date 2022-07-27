@@ -54,7 +54,7 @@ If you have a Swift Package, add dependency into Package.swift
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.7.3"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.0-beta.1"))
 ]
 ```
 
