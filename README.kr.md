@@ -54,7 +54,7 @@ Swift Package가 있다면, Package.swift의 dependency에 추가하세요.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.0-beta.1"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.1-beta.1"))
 ]
 ```
 
