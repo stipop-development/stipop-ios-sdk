@@ -184,7 +184,62 @@ extension SPDChatroomViewController: SPUIDelegate {
         pickerView.bottomAnchor.constraint(equalTo: self.pickerViewPositionView.bottomAnchor).isActive = true
         pickerView.leadingAnchor.constraint(equalTo: self.pickerViewPositionView.leadingAnchor).isActive = true
         pickerView.trailingAnchor.constraint(equalTo: self.pickerViewPositionView.trailingAnchor).isActive = true
-
+    }
+    func spViewWillAppear(_ view: SPUIView){
+        switch view {
+        case is SPUIPickerInputView:
+            print("⚡️Stipop: SPUIPickerInputView -> spViewWillAppear")
+        case is SPUIPickerCustomView:
+            print("⚡️Stipop: SPUIPickerCustomView -> spViewWillAppear")
+        case is SPUISearchViewController:
+            print("⚡️Stipop: SPUISearchViewController -> spViewWillAppear")
+        case is SPUIStoreViewController:
+            print("⚡️Stipop: SPUIStoreViewController -> spViewWillAppear")
+        default:
+            break
+        }
+    }
+    func spViewDidAppear(_ view: SPUIView){
+        switch view {
+        case is SPUIPickerInputView:
+            print("⚡️Stipop: SPUIPickerInputView -> spViewDidAppear")
+        case is SPUIPickerCustomView:
+            print("⚡️Stipop: SPUIPickerCustomView -> spViewDidAppear")
+        case is SPUISearchViewController:
+            print("⚡️Stipop: SPUISearchViewController -> spViewDidAppear")
+        case is SPUIStoreViewController:
+            print("⚡️Stipop: SPUIStoreViewController -> spViewDidAppear")
+        default:
+            break
+        }
+    }
+    func spViewWillDisappear(_ view: SPUIView){
+        switch view {
+        case is SPUIPickerInputView:
+            print("⚡️Stipop: SPUIPickerInputView -> spViewWillDisappear")
+        case is SPUIPickerCustomView:
+            print("⚡️Stipop: SPUIPickerCustomView -> spViewWillDisappear")
+        case is SPUISearchViewController:
+            print("⚡️Stipop: SPUISearchViewController -> spViewWillDisappear")
+        case is SPUIStoreViewController:
+            print("⚡️Stipop: SPUIStoreViewController -> spViewWillDisappear")
+        default:
+            break
+        }
+    }
+    func spViewDidDisappear(_ view: SPUIView){
+        switch view {
+        case is SPUIPickerInputView:
+            print("⚡️Stipop: SPUIPickerInputView -> spViewDidDisappear")
+        case is SPUIPickerCustomView:
+            print("⚡️Stipop: SPUIPickerCustomView -> spViewDidDisappear")
+        case is SPUISearchViewController:
+            print("⚡️Stipop: SPUISearchViewController -> spViewDidDisappear")
+        case is SPUIStoreViewController:
+            print("⚡️Stipop: SPUIStoreViewController -> spViewDidDisappear")
+        default:
+            break
+        }
     }
 }
 
