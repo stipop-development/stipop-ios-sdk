@@ -21,7 +21,7 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var pickerViewPositionView: UIView!
     
     
-    var user: SPUser = SPUser(userID: "someone_user_id" )
+    var user: SPUser = SPUser(userID: "-1")
     
     @IBAction func messageSend(_ sender: Any) {
         if let text = messageField.text {

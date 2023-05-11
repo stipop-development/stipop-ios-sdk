@@ -37,7 +37,7 @@ class SPDMainViewController: UIViewController {
     @IBAction func commonUserLoginClicked(_ sender: Any) {
         
         // userID must not include spacing
-        let userID = "someone_user_id"
+        let userID = "-1"
         
         self.goToChatRoomVC(user: SPUser(userID: userID))
     }

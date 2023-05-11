@@ -14,7 +14,7 @@ Stipop SDK provides over 150,000 .png and .gif stickers that can be easily integ
 
 - Swift 5.4+
 - XCode 12.5+
-- iOS 10.0+
+- iOS 11.0+
 
 ## Getting started
 

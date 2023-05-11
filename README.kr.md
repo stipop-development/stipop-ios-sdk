@@ -14,7 +14,7 @@
 
 - Swift 5.4+
 - XCode 12.5+
-- iOS 10.0+
+- iOS 11.0+
 
 ## Getting started
 
