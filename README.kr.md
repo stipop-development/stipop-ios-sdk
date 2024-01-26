@@ -8,13 +8,14 @@
 [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-green.svg?style=flat)](https://swift.org/package-manager/)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-green.svg?style=flat)](https://cocoapods.org/pods/Stipop)
 
-스티팝은 모바일 채팅, 댓글, 라이브 방송, 화상채팅 등에 손쉽게 적용할 수 있는 150,000개 이상의 png, gif 이모티콘을 제공합니다. 전 세계 수백만명이 사랑하는 이모티콘을 이용하여 여러분의 앱을 다채롭게 만들어 보세요.
+스티팝은 모바일 채팅, 댓글, 라이브 방송, 화상채팅 등에 손쉽게 적용할 수 있는 150,000개 이상의 png, gif 이모티콘을 제공합
+니다. 전 세계 수백만명이 사랑하는 이모티콘을 이용하여 여러분의 앱을 다채롭게 만들어 보세요.
 
 ## Requirements
 
 - Swift 5.4+
 - XCode 12.5+
-- iOS 11.0+
+- iOS 12.0+
 
 ## Getting started
 
@@ -24,8 +25,7 @@
 
 ## 데모 앱(for XCode 13.0+)
 
-1. 데모 앱 프로젝트를 다운로드(혹은 clone)받아주세요
-   (SPM이나 Cocoapods을 별도로 설정하지 않으셔도 됩니다.)
+1. 데모 앱 프로젝트를 다운로드(혹은 clone)받아주세요 (SPM이나 Cocoapods을 별도로 설정하지 않으셔도 됩니다.)
 
 ```bash
 git clone https://github.com/stipop-development/stipop-ios-sdk
@@ -45,8 +45,8 @@ git clone https://github.com/stipop-development/stipop-ios-sdk
 
 #### By XCode
 
-File > Swift Packages > Add Package Dependency... 에 들어가서
-`https://github.com/stipop-development/stipop-ios-sdk`을 입력하고, 사용하고 싶은 버전을 선택하여 설치하세요.
+File > Swift Packages > Add Package Dependency... 에 들어가서 `https://github.com/stipop-development/stipop-ios-sdk`을입
+력하고, 사용하고 싶은 버전을 선택하여 설치하세요.
 
 #### By Package.swift
 
@@ -54,7 +54,7 @@ Swift Package가 있다면, Package.swift의 dependency에 추가하세요.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.8"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.9"))
 ]
 ```
 
@@ -63,7 +63,7 @@ dependencies: [
 아래 코드를 `Podfile`에 붙여넣고 `pod install`로 설치하세요
 
 ```ruby
-pod 'StipopUIKit', '0.9.8'
+pod 'StipopUIKit', '0.9.9'
 ```
 
 ## Contact us

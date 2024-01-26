@@ -8,13 +8,15 @@
 [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-green.svg?style=flat)](https://swift.org/package-manager/)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-green.svg?style=flat)](https://cocoapods.org/pods/Stipop)
 
-Stipop SDK provides over 150,000 .png and .gif stickers that can be easily integrated into mobile app chats, comment sections, live streams, video calls, etc. Bring fun to your mobile app with stickers loved by millions of users worldwide.
+Stipop SDK provides over 150,000 .png and .gif stickers that can be easily integrated into mobile app chats, comment
+sections, live streams, video calls, etc. Bring fun to your mobile app with stickers loved by millions of users
+worldwide.
 
 ## Requirements
 
 - Swift 5.4+
 - XCode 12.5+
-- iOS 11.0+
+- iOS 12.0+
 
 ## Getting started
 
@@ -24,8 +26,7 @@ Stipop SDK provides over 150,000 .png and .gif stickers that can be easily integ
 
 ## Try demo(for XCode 13.0+)
 
-1. Download(or Clone) Demo App
-   (SPM or Cocoapods Adjustment is not necessary)
+1. Download(or Clone) Demo App (SPM or Cocoapods Adjustment is not necessary)
 
 ```bash
 git clone https://github.com/stipop-development/stipop-ios-sdk
@@ -45,8 +46,8 @@ git clone https://github.com/stipop-development/stipop-ios-sdk
 
 #### By XCode
 
-Go to File > Swift Packages > Add Package Dependency...
-Enter `https://github.com/stipop-development/stipop-ios-sdk`. Then select a version you want to use.
+Go to File > Swift Packages > Add Package Dependency... Enter `https://github.com/stipop-development/stipop-ios-sdk`.
+Then select a version you want to use.
 
 #### By Package.swift
 
@@ -54,7 +55,7 @@ If you have a Swift Package, add dependency into Package.swift
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.8"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.9"))
 ]
 ```
 
@@ -63,41 +64,40 @@ dependencies: [
 Copy & Paste below into `Podfile`. Then, run `pod install`.
 
 ```ruby
-pod 'StipopUIKit', '0.9.8'
+pod 'StipopUIKit', '0.9.9'
 ```
 
-
-How do I use Stipop SDK?
--------------------
+## How do I use Stipop SDK?
 
 1. Add Stipop.plist file into the project.
 2. Import Stipop and Initialize Stipop SDK before use at AppDelegate.
+
 ```swift
 import UIKit
 import Stipop
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     var window: UIWindow?
 //    let semaphore = DispatchSemaphore(value: 1)
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
         // If you want to use SAuth, execute setSAuthDelegate method.
         // *setSAuthDelegate() should be typed before initialize()
         // Stipop.setSAuthDelegate(sAuthDelegate: self)
         Stipop.initialize()
         return true
     }
-    
+
     ...
 }
 /* If you use SAuth, implement SAuthDelegate and refresh accessToken when authorization error occured. */
 /*
 extension AppDelegate: SAuthDelegate {
-    
+
     func httpError(apiEnum: SPAPIEnum, error: SPError) {
         print("⚡️Stipop: HTTP Error => \(apiEnum)")
         DispatchQueue.global().async {
@@ -113,6 +113,7 @@ extension AppDelegate: SAuthDelegate {
 }
  */
 ```
+
 3. Go to the View Controller where you want to place the button. Then, Initialize SPUIButton and connect delegate.
 
 ```swift
@@ -120,7 +121,7 @@ import UIKit
 import Stipop
 
 class ViewController: UIViewController {
-  
+
     let stipopButton = SPUIButton(type: .system)
 
     override func viewDidLoad() {
@@ -140,16 +141,16 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: SPUIDelegate {
- 
+
     func onStickerSingleTapped(_ view: SPUIView, sticker: SPSticker) {
         // This function will be executed when user chooses a sticker.
     }
-  
+
     /* If you want to use double tap feature, change the plist file and implement this function. */
     func onStickerDoubleTapped(_ view: SPUIView, sticker: SPSticker) {
         // This function will be executed when user chooses a sticker.
     }
-  
+
 }
 ```
 
