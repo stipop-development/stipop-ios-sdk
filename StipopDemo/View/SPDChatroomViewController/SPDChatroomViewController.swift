@@ -55,44 +55,68 @@ extension SPDChatroomViewController {
         configureMoreButton()
         configureMessageFields()
         
-        makeBubbles()
-    }
-    func configureNavigationBar() {
-        configureNavigationBarTopView()
-    }
-    
-    func configureNavigationBarTopView(){
-        let navigationBarTopView = UIView()
-        navigationBarTopView.backgroundColor = UIColor(named: ColorEnum.StipopMain)
+        makeInitialBubbles()
         
-        view.addSubview(navigationBarTopView)
+        func configureNavigationBar(){
+            let navigationBarTopView = UIView()
+            navigationBarTopView.backgroundColor = UIColor(named: ColorEnum.StipopMain)
+            
+            view.addSubview(navigationBarTopView)
+            
+            let safeAreaTopInset = UIApplication.shared.windows[0].safeAreaInsets.top
+            
+            navigationBarTopView.translatesAutoresizingMaskIntoConstraints = false
+            navigationBarTopView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+            navigationBarTopView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+            navigationBarTopView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+            navigationBarTopView.heightAnchor.constraint(equalToConstant: safeAreaTopInset).isActive = true
+        }
+        func configureTableView() {
+            tableView.dataSource = self
+            tableView.rowHeight = UITableView.automaticDimension
+        }
         
-        let safeAreaTopInset = UIApplication.shared.windows[0].safeAreaInsets.top
+        func configureMoreButton() {
+            if #available(iOS 15.0, *) {
+                let barButtonMenu = UIMenu(title: "", children: [
+                    UIAction(title: "Contact us", handler: { [weak self] action in
+                        self?.contactUs(action: action)
+                    }),
+                    UIAction(title: "Go to github", handler: { [weak self] action in
+                        self?.goToGithub(action: action)
+                    })
+                ])
+                moreButton.menu = barButtonMenu
+            }
+        }
         
-        navigationBarTopView.translatesAutoresizingMaskIntoConstraints = false
-        navigationBarTopView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        navigationBarTopView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        navigationBarTopView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        navigationBarTopView.heightAnchor.constraint(equalToConstant: safeAreaTopInset).isActive = true
-    }
-    func configureTableView() {
-        tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-    }
-    
-    func configureMoreButton() {
-        if #available(iOS 15.0, *) {
-            let barButtonMenu = UIMenu(title: "", children: [
-                UIAction(title: "Contact us", handler: { [weak self] action in
-                    self?.contactUs(action: action)
-                }),
-                UIAction(title: "Go to github", handler: { [weak self] action in
-                    self?.goToGithub(action: action)
-                })
-            ])
-            moreButton.menu = barButtonMenu
+        func configureMessageFields() {
+            messageField.addTarget(self, action: #selector(messageFieldDidChange(_:)), for: .editingChanged)
+            
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(self.keyboardWillShow(_:)),
+                                                   name: UIResponder.keyboardWillShowNotification,
+                                                   object: nil)
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(self.keyboardWillHide(_:)),
+                                                   name: UIResponder.keyboardWillHideNotification,
+                                                   object: nil)
+        }
+        
+        func makeInitialBubbles(){
+            appendChat(.text(.counter, "Hi, there!👋"))
+            appendChat(.sticker(.counter, "https://img.stipop.io/2020/3/31/1585719674256_CookieArrow_size.gif"))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.appendChat(.text(.counter, "Welcome to Stipop SDK!\nPress the button below to get started."))
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                self?.appendChat(.execution(.counter, "Try the sticker feature. 🔽", {
+                    self?.stipopPickerButton.sendActions(for: .touchUpInside)
+                }))
+            }
         }
     }
+    
     @available(iOS 13.0, *)
     func contactUs(action: UIAction) {
         guard let url = URL(string: "https://developers.stipop.io/contact-us") else { return }
@@ -104,18 +128,6 @@ extension SPDChatroomViewController {
         UIApplication.shared.open(url)
     }
     
-    func configureMessageFields() {
-        messageField.addTarget(self, action: #selector(messageFieldDidChange(_:)), for: .editingChanged)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.keyboardWillShow(_:)),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.keyboardWillHide(_:)),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
-    }
     @objc func keyboardWillShow(_ notification: NSNotification) {
         if let userInfo = notification.userInfo,
            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
@@ -152,19 +164,6 @@ extension SPDChatroomViewController {
         let indexPath = IndexPath(row: self.chattings.count-1, section: 1)
         DispatchQueue.main.async {
             self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-        }
-    }
-    
-    func makeBubbles(){
-        appendChat(.text(.counter, "Hi, there!👋"))
-        appendChat(.sticker(.counter, "https://img.stipop.io/2020/3/31/1585719674256_CookieArrow_size.gif"))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            self?.appendChat(.text(.counter, "Welcome to Stipop SDK!\nPress the button below to get started."))
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            self?.appendChat(.execution(.counter, "Try the sticker feature. 🔽", {
-                self?.stipopPickerButton.sendActions(for: .touchUpInside)
-            }))
         }
     }
     
@@ -223,6 +222,13 @@ extension SPDChatroomViewController: SPUIDelegate {
         pickerView.bottomAnchor.constraint(equalTo: self.pickerViewPositionView.bottomAnchor).isActive = true
         pickerView.leadingAnchor.constraint(equalTo: self.pickerViewPositionView.leadingAnchor).isActive = true
         pickerView.trailingAnchor.constraint(equalTo: self.pickerViewPositionView.trailingAnchor).isActive = true
+    }
+    
+    func executePaymentForPackDownload(packageId: Int, completion: @escaping (Int) -> Void) {
+        /// 1. Proceed with payment process
+        ///  ~
+        /// 2. Return packageId in the completion parameter
+        completion(packageId)
     }
     
     func spViewWillAppear(_ view: SPUIView){
