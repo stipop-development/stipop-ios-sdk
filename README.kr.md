@@ -54,7 +54,7 @@ Swift Package가 있다면, Package.swift의 dependency에 추가하세요.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.9"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.10"))
 ]
 ```
 
@@ -63,7 +63,7 @@ dependencies: [
 아래 코드를 `Podfile`에 붙여넣고 `pod install`로 설치하세요
 
 ```ruby
-pod 'StipopUIKit', '0.9.9'
+pod 'StipopUIKit', '0.9.10'
 ```
 
 ## Contact us

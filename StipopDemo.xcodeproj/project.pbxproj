@@ -24,8 +24,8 @@
 		0345AB62272FB84F007B20F9 /* SPDMyTextChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB57272FB84F007B20F9 /* SPDMyTextChatCell.swift */; };
 		0345AB63272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345AB58272FB84F007B20F9 /* SPDCounterExecuteChatCell.swift */; };
 		23AC95732844A28700200E93 /* Stipop in Frameworks */ = {isa = PBXBuildFile; productRef = 23AC95722844A28700200E93 /* Stipop */; };
-		5F00A5F32A0D175C008AB17E /* Stipop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F00A5F22A0D175C008AB17E /* Stipop.plist */; };
 		5F05EFC52891B2CD00E526FC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F05EFC42891B2CD00E526FC /* Alamofire */; };
+		5F15F9C62BA29FF000B25AB4 /* Stipop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F15F9C52BA29FF000B25AB4 /* Stipop.plist */; };
 		5F1B860B2891B198005F85AD /* DemoSAuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B860A2891B198005F85AD /* DemoSAuthAPI.swift */; };
 		5F1B860D2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B860C2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift */; };
 		5F1B860F2891B1AA005F85AD /* DemoSAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B860E2891B1AA005F85AD /* DemoSAuthManager.swift */; };
@@ -64,7 +64,7 @@
 		03C1CFDF273248B200C16DE6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		03C1CFE0273248E500C16DE6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		03C1CFE1273248E500C16DE6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		5F00A5F22A0D175C008AB17E /* Stipop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stipop.plist; sourceTree = "<group>"; };
+		5F15F9C52BA29FF000B25AB4 /* Stipop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stipop.plist; sourceTree = "<group>"; };
 		5F1B860A2891B198005F85AD /* DemoSAuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSAuthAPI.swift; sourceTree = "<group>"; };
 		5F1B860C2891B1A2005F85AD /* DemoSAuthAPI_access_token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSAuthAPI_access_token.swift; sourceTree = "<group>"; };
 		5F1B860E2891B1AA005F85AD /* DemoSAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSAuthManager.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				0345AB49272FB84F007B20F9 /* Model */,
 				0345AB4B272FB84F007B20F9 /* View */,
 				0345AB43272FB80F007B20F9 /* Info.plist */,
-				5F00A5F22A0D175C008AB17E /* Stipop.plist */,
+				5F15F9C52BA29FF000B25AB4 /* Stipop.plist */,
 			);
 			path = StipopDemo;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0345AB42272FB80F007B20F9 /* LaunchScreen.storyboard in Resources */,
-				5F00A5F32A0D175C008AB17E /* Stipop.plist in Resources */,
+				5F15F9C62BA29FF000B25AB4 /* Stipop.plist in Resources */,
 				0345AB3F272FB80F007B20F9 /* Assets.xcassets in Resources */,
 				0345AB5B272FB84F007B20F9 /* SPDChatroomViewController.storyboard in Resources */,
 				0345AB3D272FB80D007B20F9 /* Main.storyboard in Resources */,

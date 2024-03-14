@@ -20,7 +20,6 @@ class SPDChatroomViewController: UIViewController {
     @IBOutlet weak var messageSendButton: UIButton!
     @IBOutlet weak var pickerViewPositionView: UIView!
     
-    
     var user: SPUser = SPUser(userID: "-1")
     
     @IBAction func messageSend(_ sender: Any) {
@@ -36,13 +35,11 @@ class SPDChatroomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageSendButton.isEnabled = false
-        configureNavigationBar()
-        configureTableView()
-        configureMoreButton()
-        configureMessageFields()
-        configureStipopButton()
-        makeBubbles()
+        configureUI()
         
+        configureStipopButton()
+//        setupSearchVC()
+//        setupPickerVC()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -51,6 +48,15 @@ class SPDChatroomViewController: UIViewController {
 }
 
 extension SPDChatroomViewController {
+    
+    private func configureUI(){
+        configureNavigationBar()
+        configureTableView()
+        configureMoreButton()
+        configureMessageFields()
+        
+        makeBubbles()
+    }
     func configureNavigationBar() {
         configureNavigationBarTopView()
     }
@@ -131,7 +137,6 @@ extension SPDChatroomViewController {
     }
     
     func configureStipopButton() {
-        
         stipopPickerButton.setUser(user, viewType: .picker)
         stipopPickerButton.delegate = self
         
@@ -162,13 +167,47 @@ extension SPDChatroomViewController {
             }))
         }
     }
+    
+    func setupSearchVC(){
+        let searchVc = SPUISearchViewController()
+        searchVc.view.backgroundColor = .white
+        searchVc.setUser(user)
+        searchVc.delegate = self
+        
+        //        self.present(searchVc, animated: true)
+        if let searchView = searchVc.view {
+            self.addChild(searchVc)
+            self.view.addSubview(searchView)
+            searchView.translatesAutoresizingMaskIntoConstraints = false
+            searchView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            searchView.heightAnchor.constraint(equalToConstant: 600).isActive = true
+            searchView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+            searchView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        }
+    }
+    
+    func setupPickerVC(){
+        let pickerView = SPUIPickerCustomView()
+        
+        pickerView.setUser(user)
+        pickerView.delegate = self
+        
+        self.view.addSubview(pickerView)
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        pickerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        pickerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        pickerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        pickerView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+    }
 }
 
 extension SPDChatroomViewController: SPUIDelegate {
     func onStickerSingleTapped(_ view: SPUIView, sticker: SPSticker) {
+        print("onStickerSingleTapped")
         appendChat(.sticker(.me, sticker.stickerImg))
     }
     func onStickerDoubleTapped(_ view: SPUIView, sticker: SPSticker) {
+        print("onStickerDoubleTapped")
         appendChat(.sticker(.me, sticker.stickerImg))
     }
     func pickerCustomViewSetup(_ view: SPUIView, pickerView: UIView) {
@@ -185,6 +224,7 @@ extension SPDChatroomViewController: SPUIDelegate {
         pickerView.leadingAnchor.constraint(equalTo: self.pickerViewPositionView.leadingAnchor).isActive = true
         pickerView.trailingAnchor.constraint(equalTo: self.pickerViewPositionView.trailingAnchor).isActive = true
     }
+    
     func spViewWillAppear(_ view: SPUIView){
         switch view {
         case is SPUIPickerInputView:
