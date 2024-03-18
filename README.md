@@ -55,7 +55,7 @@ If you have a Swift Package, add dependency into Package.swift
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.10"))
+    .package(url: "https://github.com/stipop-development/stipop-ios-sdk.git", .upToNextMajor(from: "0.9.11"))
 ]
 ```
 
@@ -64,7 +64,7 @@ dependencies: [
 Copy & Paste below into `Podfile`. Then, run `pod install`.
 
 ```ruby
-pod 'StipopUIKit', '0.9.10'
+pod 'StipopUIKit', '0.9.11'
 ```
 
 ## How do I use Stipop SDK?
