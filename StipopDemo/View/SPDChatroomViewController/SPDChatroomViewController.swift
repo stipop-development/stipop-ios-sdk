@@ -224,11 +224,15 @@ extension SPDChatroomViewController: SPUIDelegate {
         pickerView.trailingAnchor.constraint(equalTo: self.pickerViewPositionView.trailingAnchor).isActive = true
     }
     
-    func executePaymentForPackDownload(packageId: Int, completion: @escaping (Int) -> Void) {
+    func executePaymentForPackDownload(priceTier: SPPriceTier, packageId: Int, completion: @escaping (SPPriceTier, Int) -> Void) {
         /// 1. Proceed with payment process
         ///  ~
-        /// 2. Return packageId in the completion parameter
-        completion(packageId)
+        /// 2. Return `priceTier & packageId` in the completion parameter
+        completion(priceTier, packageId)
+    }
+    
+    func executePaymentForPackDownload(packageId: Int, completion: @escaping (Int) -> Void) {
+  
     }
     
     func spViewWillAppear(_ view: SPUIView){
